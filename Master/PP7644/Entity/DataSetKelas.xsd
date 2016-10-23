@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetKelas" targetNamespace="http://tempuri.org/DataSetKelas.xsd" xmlns:mstns="http://tempuri.org/DataSetKelas.xsd" xmlns="http://tempuri.org/DataSetKelas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PP_L_7644ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PP_L_7644ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PP7644.Properties.Settings.GlobalReference.Default.PP_L_7644ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TBL_KELAS_SENAMTableAdapter" GeneratorDataComponentClassName="TBL_KELAS_SENAMTableAdapter" Name="TBL_KELAS_SENAM" UserDataComponentName="TBL_KELAS_SENAMTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PP_L_7644ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        TBL_KELAS_SENAM.id_kelas, TBL_KELAS_SENAM.nama_kelas, TBL_KELAS_SENAM.tarif_perjam, TBL_PEGAWAI.nama_pegawai
+FROM            TBL_KELAS_SENAM INNER JOIN
+                         TBL_INSTRUKTUR ON TBL_KELAS_SENAM.id_kelas = TBL_INSTRUKTUR.id_kelas INNER JOIN
+                         TBL_PEGAWAI ON TBL_INSTRUKTUR.id_pegawai = TBL_PEGAWAI.id_pegawai</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_kelas" DataSetColumn="id_kelas" />
+              <Mapping SourceColumn="nama_kelas" DataSetColumn="nama_kelas" />
+              <Mapping SourceColumn="tarif_perjam" DataSetColumn="tarif_perjam" />
+              <Mapping SourceColumn="nama_pegawai" DataSetColumn="nama_pegawai" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetKelas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetKelas" msprop:Generator_UserDSName="DataSetKelas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TBL_KELAS_SENAM" msprop:Generator_TableClassName="TBL_KELAS_SENAMDataTable" msprop:Generator_TableVarName="tableTBL_KELAS_SENAM" msprop:Generator_TablePropName="TBL_KELAS_SENAM" msprop:Generator_RowDeletingName="TBL_KELAS_SENAMRowDeleting" msprop:Generator_RowChangingName="TBL_KELAS_SENAMRowChanging" msprop:Generator_RowEvHandlerName="TBL_KELAS_SENAMRowChangeEventHandler" msprop:Generator_RowDeletedName="TBL_KELAS_SENAMRowDeleted" msprop:Generator_UserTableName="TBL_KELAS_SENAM" msprop:Generator_RowChangedName="TBL_KELAS_SENAMRowChanged" msprop:Generator_RowEvArgName="TBL_KELAS_SENAMRowChangeEvent" msprop:Generator_RowClassName="TBL_KELAS_SENAMRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_kelas" msprop:Generator_ColumnVarNameInTable="columnid_kelas" msprop:Generator_ColumnPropNameInRow="id_kelas" msprop:Generator_ColumnPropNameInTable="id_kelasColumn" msprop:Generator_UserColumnName="id_kelas" type="xs:int" />
+              <xs:element name="nama_kelas" msprop:Generator_ColumnVarNameInTable="columnnama_kelas" msprop:Generator_ColumnPropNameInRow="nama_kelas" msprop:Generator_ColumnPropNameInTable="nama_kelasColumn" msprop:Generator_UserColumnName="nama_kelas" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tarif_perjam" msprop:Generator_ColumnVarNameInTable="columntarif_perjam" msprop:Generator_ColumnPropNameInRow="tarif_perjam" msprop:Generator_ColumnPropNameInTable="tarif_perjamColumn" msprop:Generator_UserColumnName="tarif_perjam" type="xs:int" minOccurs="0" />
+              <xs:element name="nama_pegawai" msprop:Generator_ColumnVarNameInTable="columnnama_pegawai" msprop:Generator_ColumnPropNameInRow="nama_pegawai" msprop:Generator_ColumnPropNameInTable="nama_pegawaiColumn" msprop:Generator_UserColumnName="nama_pegawai" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TBL_KELAS_SENAM" />
+      <xs:field xpath="mstns:id_kelas" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
