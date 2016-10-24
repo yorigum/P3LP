@@ -73,7 +73,7 @@ namespace PP7644.Boundary.Kasir.Kelola_Member
             if (dateLahir.Text == "")
             {
                 errorProvider1.SetError(dateLahir, "Silahkan pilih tanggal lahir.");
-                radioMale.Focus();
+                dateLahir.Focus();
                 temp = false;
             }
 
@@ -106,8 +106,9 @@ namespace PP7644.Boundary.Kasir.Kelola_Member
                 if (cekInput())
                 {
                     errorProvider1.Clear();
-                    var KM = new KelolaMember(txtNama.Text, lblIDMember.Text, txtAlamat.Text, txtTelepon.Text,
+                    var KM = new KelolaMember(txtNama.Text, lblIDMember.Text, getvalGender(Text),txtAlamat.Text, txtTelepon.Text,
                         txtIDno.Text, Convert.ToDateTime(dateLahir.Value.ToString()));
+                    
                     this.Hide();
                     var myParent = (FormKelolaMember) Parent;
                     myParent.Enable();
@@ -126,9 +127,20 @@ namespace PP7644.Boundary.Kasir.Kelola_Member
  
         }
 
-        public void setEnableParent()
+        public string getvalGender(string text)
         {
-           
+            string gender = null;
+
+            if (radioMale.Checked)
+            {
+                gender = "Laki-laki";
+            }
+            else if (radioFemale.Checked)
+            {
+                gender = "Perempuan";
+            }
+
+            return gender;
         }
     }
 }

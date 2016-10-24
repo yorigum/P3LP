@@ -2,20 +2,22 @@
 
 namespace PP7644.Entity
 {
-    internal class KelolaMember
+    public class KelolaMember
     {
         //txtNama.Text, lblIDMember.Text, txtAlamat.Text, txtTelepon.Text, txtIDno.Text,"","","",dateLahir.Value.ToShortDateString()
         private string nama;
+        private string gender;
         private string idMember;
         private string alamat;
         private string telepon;
         private string noidentitas;
         private DateTime datelahir;
         
-        public KelolaMember(string nama, string idMember , string alamat, string telepon, string noidentitas, DateTime dateLahir)
+        public KelolaMember(string nama, string gender,string idMember ,string alamat, string telepon, string noidentitas, DateTime dateLahir)
         {
             // TODO: Complete member initialization
             this.nama = nama;
+            this.gender = gender;
             this.alamat = alamat;
             this.telepon = telepon;
             this.noidentitas = noidentitas;
@@ -32,6 +34,12 @@ namespace PP7644.Entity
         {
             get { return idMember; }
             set { idMember = value; }
+        }
+
+        public string Gender
+        {
+            get { return gender; }
+            set { gender = value; }
         }
 
         public string Alamat

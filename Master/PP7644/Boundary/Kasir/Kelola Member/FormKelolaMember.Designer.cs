@@ -394,7 +394,7 @@
             // 
             // uC_AddMember1
             // 
-            this.uC_AddMember1.Location = new System.Drawing.Point(324, 30);
+            this.uC_AddMember1.Location = new System.Drawing.Point(307, 23);
             this.uC_AddMember1.Name = "uC_AddMember1";
             this.uC_AddMember1.Size = new System.Drawing.Size(460, 376);
             this.uC_AddMember1.TabIndex = 9;

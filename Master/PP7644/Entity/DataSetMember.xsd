@@ -1,35 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
-<xs:schema id="DataSetMember" targetNamespace="http://tempuri.org/DataSetMember.xsd"
-           xmlns:mstns="http://tempuri.org/DataSetMember.xsd" xmlns="http://tempuri.org/DataSetMember.xsd"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
-           xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified"
-           elementFormDefault="qualified">
+<xs:schema id="DataSetMember" targetNamespace="http://tempuri.org/DataSetMember.xsd" xmlns:mstns="http://tempuri.org/DataSetMember.xsd" xmlns="http://tempuri.org/DataSetMember.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter"
-                  Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema"
-                  xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PP_L_7644ConnectionString"
-                      ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly"
-                      Name="PP_L_7644ConnectionString (Settings)" ParameterPrefix="@"
-                      PropertyReference="ApplicationSettings.PP7644.Properties.Settings.GlobalReference.Default.PP_L_7644ConnectionString"
-                      Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PP_L_7644ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PP_L_7644ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PP7644.Properties.Settings.GlobalReference.Default.PP_L_7644ConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component"
-                        DataAccessorModifier="AutoLayout, AnsiClass, Class, Public"
-                        DataAccessorName="TBL_MEMBERTableAdapter"
-                        GeneratorDataComponentClassName="TBL_MEMBERTableAdapter" Name="TBL_MEMBER"
-                        UserDataComponentName="TBL_MEMBERTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TBL_MEMBERTableAdapter" GeneratorDataComponentClassName="TBL_MEMBERTableAdapter" Name="TBL_MEMBER" UserDataComponentName="TBL_MEMBERTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="PP_L_7644ConnectionString (Settings)" DbObjectType="Unknown"
-                        FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both"
-                        GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill"
-                        GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset"
-                        ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-                        UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="PP_L_7644ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>
@@ -52,11 +32,7 @@
               <Mapping SourceColumn="nama_kelas" DataSetColumn="nama_kelas" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="PP_L_7644ConnectionString (Settings)" DbObjectType="Unknown"
-                        GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy"
-                        GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset"
-                        ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-                        UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetDataBy">
+              <DbSource ConnectionRef="PP_L_7644ConnectionString (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetDataBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>
@@ -73,109 +49,44 @@
                       ORDER BY TBL_MEMBER.id_member DESC
                     </CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="keyword" ColumnName="nama_member"
-                                 DataSourceName="PP_L_7644.dbo.TBL_MEMBER" DataTypeServer="varchar(50)"
-                                 DbType="AnsiString" Direction="Input" ParameterName="@keyword" Precision="0"
-                                 ProviderType="VarChar" Scale="0" Size="50" SourceColumn="nama_member"
-                                 SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="keyword" ColumnName="nama_member" DataSourceName="PP_L_7644.dbo.TBL_MEMBER" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@keyword" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="nama_member" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="PP_L_7644ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown"
-                        GenerateShortCommands="true" GeneratorSourceName="InsertMember" Modifier="Public"
-                        Name="InsertMember" QueryType="NoData"
-                        ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-                        UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertMember">
+              <DbSource ConnectionRef="PP_L_7644ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertMember" Modifier="Public" Name="InsertMember" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertMember">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>
-                      INSERT INTO TBL_MEMBER
-                      (nama_member, tgl_lahir, gender, alamat, nomor_telepon, nomor_identitas)
-                      VALUES        (@nama,@tglLahir,@gender,@alamat,@telepon,@no_identitas)
-                    </CommandText>
+                    <CommandText>INSERT INTO TBL_MEMBER
+                         (nama_member, tgl_lahir, gender, alamat, nomor_telepon, nomor_identitas)
+VALUES        (@nama,@tglLahir,@gender,@alamat,@telepon,@no_identitas)</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="nama" ColumnName="nama_member"
-                                 DataSourceName="PP_L_7644.dbo.TBL_MEMBER" DataTypeServer="varchar(50)"
-                                 DbType="AnsiString" Direction="Input" ParameterName="@nama" Precision="0"
-                                 ProviderType="VarChar" Scale="0" Size="50" SourceColumn="nama_member"
-                                 SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="tglLahir" ColumnName="tgl_lahir"
-                                 DataSourceName="PP_L_7644.dbo.TBL_MEMBER" DataTypeServer="varchar(50)"
-                                 DbType="AnsiString" Direction="Input" ParameterName="@tglLahir" Precision="0"
-                                 ProviderType="VarChar" Scale="0" Size="50" SourceColumn="tgl_lahir"
-                                 SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="gender" ColumnName="gender"
-                                 DataSourceName="PP_L_7644.dbo.TBL_MEMBER" DataTypeServer="varchar(50)"
-                                 DbType="AnsiString" Direction="Input" ParameterName="@gender" Precision="0"
-                                 ProviderType="VarChar" Scale="0" Size="50" SourceColumn="gender"
-                                 SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="alamat" ColumnName="alamat"
-                                 DataSourceName="PP_L_7644.dbo.TBL_MEMBER" DataTypeServer="varchar(50)"
-                                 DbType="AnsiString" Direction="Input" ParameterName="@alamat" Precision="0"
-                                 ProviderType="VarChar" Scale="0" Size="50" SourceColumn="alamat"
-                                 SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="telepon" ColumnName="nomor_telepon"
-                                 DataSourceName="PP_L_7644.dbo.TBL_MEMBER" DataTypeServer="varchar(50)"
-                                 DbType="AnsiString" Direction="Input" ParameterName="@telepon" Precision="0"
-                                 ProviderType="VarChar" Scale="0" Size="50" SourceColumn="nomor_telepon"
-                                 SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="no_identitas" ColumnName="nomor_identitas"
-                                 DataSourceName="PP_L_7644.dbo.TBL_MEMBER" DataTypeServer="varchar(50)"
-                                 DbType="AnsiString" Direction="Input" ParameterName="@no_identitas" Precision="0"
-                                 ProviderType="VarChar" Scale="0" Size="50" SourceColumn="nomor_identitas"
-                                 SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="nama" ColumnName="nama_member" DataSourceName="PP_L_7644.dbo.TBL_MEMBER" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@nama" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="nama_member" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="tglLahir" ColumnName="tgl_lahir" DataSourceName="PP_L_7644.dbo.TBL_MEMBER" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@tglLahir" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="tgl_lahir" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="gender" ColumnName="gender" DataSourceName="PP_L_7644.dbo.TBL_MEMBER" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@gender" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="gender" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="alamat" ColumnName="alamat" DataSourceName="PP_L_7644.dbo.TBL_MEMBER" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@alamat" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="alamat" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="telepon" ColumnName="nomor_telepon" DataSourceName="PP_L_7644.dbo.TBL_MEMBER" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@telepon" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="nomor_telepon" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="no_identitas" ColumnName="nomor_identitas" DataSourceName="PP_L_7644.dbo.TBL_MEMBER" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@no_identitas" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="nomor_identitas" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
             </Sources>
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component"
-                        DataAccessorModifier="AutoLayout, AnsiClass, Class, Public"
-                        DataAccessorName="TBL_KELAS_SENAMTableAdapter"
-                        GeneratorDataComponentClassName="TBL_KELAS_SENAMTableAdapter" Name="TBL_KELAS_SENAM"
-                        UserDataComponentName="TBL_KELAS_SENAMTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TBL_KELAS_SENAMTableAdapter" GeneratorDataComponentClassName="TBL_KELAS_SENAMTableAdapter" Name="TBL_KELAS_SENAM" UserDataComponentName="TBL_KELAS_SENAMTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="PP_L_7644ConnectionString (Settings)"
-                        DbObjectName="PP_L_7644.dbo.TBL_KELAS_SENAM" DbObjectType="Table" FillMethodModifier="Public"
-                        FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true"
-                        GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public"
-                        GetMethodName="GetData" QueryType="Rowset"
-                        ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-                        UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="PP_L_7644ConnectionString (Settings)" DbObjectName="PP_L_7644.dbo.TBL_KELAS_SENAM" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [TBL_KELAS_SENAM] WHERE (([id_kelas] = @Original_id_kelas) AND ((@IsNull_nama_kelas = 1 AND [nama_kelas] IS NULL) OR ([nama_kelas] = @Original_nama_kelas)) AND ((@IsNull_tarif_perjam = 1 AND [tarif_perjam] IS NULL) OR ([tarif_perjam] = @Original_tarif_perjam)) AND ((@IsNull_id_instruktur = 1 AND [id_instruktur] IS NULL) OR ([id_instruktur] = @Original_id_instruktur)))</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@Original_id_kelas" Precision="0" ProviderType="Int"
-                                 Scale="0" Size="0" SourceColumn="id_kelas" SourceColumnNullMapping="false"
-                                 SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@IsNull_nama_kelas" Precision="0" ProviderType="Int"
-                                 Scale="0" Size="0" SourceColumn="nama_kelas" SourceColumnNullMapping="true"
-                                 SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString"
-                                 Direction="Input" ParameterName="@Original_nama_kelas" Precision="0"
-                                 ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_kelas"
-                                 SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@IsNull_tarif_perjam" Precision="0"
-                                 ProviderType="Int" Scale="0" Size="0" SourceColumn="tarif_perjam"
-                                 SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@Original_tarif_perjam" Precision="0"
-                                 ProviderType="Int" Scale="0" Size="0" SourceColumn="tarif_perjam"
-                                 SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@IsNull_id_instruktur" Precision="0"
-                                 ProviderType="Int" Scale="0" Size="0" SourceColumn="id_instruktur"
-                                 SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@Original_id_instruktur" Precision="0"
-                                 ProviderType="Int" Scale="0" Size="0" SourceColumn="id_instruktur"
-                                 SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id_kelas" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_kelas" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_nama_kelas" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nama_kelas" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_nama_kelas" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_kelas" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_tarif_perjam" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="tarif_perjam" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_tarif_perjam" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="tarif_perjam" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_id_instruktur" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_instruktur" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id_instruktur" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_instruktur" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
@@ -186,22 +97,10 @@
                       SELECT id_kelas, nama_kelas, tarif_perjam, id_instruktur FROM TBL_KELAS_SENAM WHERE (id_kelas = @id_kelas)
                     </CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@id_kelas" Precision="0" ProviderType="Int" Scale="0"
-                                 Size="0" SourceColumn="id_kelas" SourceColumnNullMapping="false"
-                                 SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString"
-                                 Direction="Input" ParameterName="@nama_kelas" Precision="0" ProviderType="VarChar"
-                                 Scale="0" Size="0" SourceColumn="nama_kelas" SourceColumnNullMapping="false"
-                                 SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@tarif_perjam" Precision="0" ProviderType="Int"
-                                 Scale="0" Size="0" SourceColumn="tarif_perjam" SourceColumnNullMapping="false"
-                                 SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@id_instruktur" Precision="0" ProviderType="Int"
-                                 Scale="0" Size="0" SourceColumn="id_instruktur" SourceColumnNullMapping="false"
-                                 SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@id_kelas" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_kelas" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@nama_kelas" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_kelas" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@tarif_perjam" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="tarif_perjam" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@id_instruktur" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_instruktur" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
@@ -221,50 +120,17 @@
                       SELECT id_kelas, nama_kelas, tarif_perjam, id_instruktur FROM TBL_KELAS_SENAM WHERE (id_kelas = @id_kelas)
                     </CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@id_kelas" Precision="0" ProviderType="Int" Scale="0"
-                                 Size="0" SourceColumn="id_kelas" SourceColumnNullMapping="false"
-                                 SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString"
-                                 Direction="Input" ParameterName="@nama_kelas" Precision="0" ProviderType="VarChar"
-                                 Scale="0" Size="0" SourceColumn="nama_kelas" SourceColumnNullMapping="false"
-                                 SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@tarif_perjam" Precision="0" ProviderType="Int"
-                                 Scale="0" Size="0" SourceColumn="tarif_perjam" SourceColumnNullMapping="false"
-                                 SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@id_instruktur" Precision="0" ProviderType="Int"
-                                 Scale="0" Size="0" SourceColumn="id_instruktur" SourceColumnNullMapping="false"
-                                 SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@Original_id_kelas" Precision="0" ProviderType="Int"
-                                 Scale="0" Size="0" SourceColumn="id_kelas" SourceColumnNullMapping="false"
-                                 SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@IsNull_nama_kelas" Precision="0" ProviderType="Int"
-                                 Scale="0" Size="0" SourceColumn="nama_kelas" SourceColumnNullMapping="true"
-                                 SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString"
-                                 Direction="Input" ParameterName="@Original_nama_kelas" Precision="0"
-                                 ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_kelas"
-                                 SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@IsNull_tarif_perjam" Precision="0"
-                                 ProviderType="Int" Scale="0" Size="0" SourceColumn="tarif_perjam"
-                                 SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@Original_tarif_perjam" Precision="0"
-                                 ProviderType="Int" Scale="0" Size="0" SourceColumn="tarif_perjam"
-                                 SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@IsNull_id_instruktur" Precision="0"
-                                 ProviderType="Int" Scale="0" Size="0" SourceColumn="id_instruktur"
-                                 SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@Original_id_instruktur" Precision="0"
-                                 ProviderType="Int" Scale="0" Size="0" SourceColumn="id_instruktur"
-                                 SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@id_kelas" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_kelas" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@nama_kelas" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_kelas" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@tarif_perjam" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="tarif_perjam" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@id_instruktur" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_instruktur" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id_kelas" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_kelas" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_nama_kelas" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nama_kelas" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_nama_kelas" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_kelas" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_tarif_perjam" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="tarif_perjam" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_tarif_perjam" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="tarif_perjam" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_id_instruktur" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_instruktur" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id_instruktur" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_instruktur" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -277,11 +143,7 @@
               <Mapping SourceColumn="id_instruktur" DataSetColumn="id_instruktur" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="PP_L_7644ConnectionString (Settings)"
-                        DbObjectName="PP_L_7644.dbo.TBL_KELAS_SENAM" DbObjectType="Table" GenerateShortCommands="true"
-                        GeneratorSourceName="GetIdKelas" Modifier="Public" Name="GetIdKelas" QueryType="Scalar"
-                        ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-                        UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetIdKelas">
+              <DbSource ConnectionRef="PP_L_7644ConnectionString (Settings)" DbObjectName="PP_L_7644.dbo.TBL_KELAS_SENAM" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetIdKelas" Modifier="Public" Name="GetIdKelas" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetIdKelas">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>
@@ -290,14 +152,26 @@
                       WHERE        (nama_kelas = @kelas)
                     </CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="kelas" ColumnName="nama_kelas"
-                                 DataSourceName="PP_L_7644.dbo.TBL_KELAS_SENAM" DataTypeServer="varchar(50)"
-                                 DbType="AnsiString" Direction="Input" ParameterName="@kelas" Precision="0"
-                                 ProviderType="VarChar" Scale="0" Size="50" SourceColumn="nama_kelas"
-                                 SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="kelas" ColumnName="nama_kelas" DataSourceName="PP_L_7644.dbo.TBL_KELAS_SENAM" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@kelas" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="nama_kelas" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="PP_L_7644ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertKelas" Modifier="Public" Name="InsertKelas" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertKelas">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO TBL_KELAS_SENAM
+                         (tarif_perjam, nama_kelas)
+VALUES        (@tarif_perjam,@nama_kelas); 
+                      SELECT id_kelas, nama_kelas, tarif_perjam, id_instruktur FROM TBL_KELAS_SENAM WHERE (id_kelas = @id_kelas)
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="tarif_perjam" ColumnName="tarif_perjam" DataSourceName="PP_L_7644.dbo.TBL_KELAS_SENAM" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@tarif_perjam" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="tarif_perjam" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="nama_kelas" ColumnName="nama_kelas" DataSourceName="PP_L_7644.dbo.TBL_KELAS_SENAM" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@nama_kelas" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="nama_kelas" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="id_kelas" ColumnName="id_kelas" DataSourceName="PP_L_7644.dbo.TBL_KELAS_SENAM" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id_kelas" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id_kelas" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
               </DbSource>
             </Sources>
           </TableAdapter>
@@ -306,70 +180,42 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DataSetMember" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"
-              msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetMember"
-              msprop:Generator_UserDSName="DataSetMember">
+  <xs:element name="DataSetMember" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetMember" msprop:Generator_UserDSName="DataSetMember">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="TBL_MEMBER" msprop:Generator_TableClassName="TBL_MEMBERDataTable"
-                    msprop:Generator_TableVarName="tableTBL_MEMBER"
-                    msprop:Generator_RowChangedName="TBL_MEMBERRowChanged" msprop:Generator_TablePropName="TBL_MEMBER"
-                    msprop:Generator_RowDeletingName="TBL_MEMBERRowDeleting"
-                    msprop:Generator_RowChangingName="TBL_MEMBERRowChanging"
-                    msprop:Generator_RowEvHandlerName="TBL_MEMBERRowChangeEventHandler"
-                    msprop:Generator_RowDeletedName="TBL_MEMBERRowDeleted"
-                    msprop:Generator_RowClassName="TBL_MEMBERRow" msprop:Generator_UserTableName="TBL_MEMBER"
-                    msprop:Generator_RowEvArgName="TBL_MEMBERRowChangeEvent">
+        <xs:element name="TBL_MEMBER" msprop:Generator_TableClassName="TBL_MEMBERDataTable" msprop:Generator_TableVarName="tableTBL_MEMBER" msprop:Generator_TablePropName="TBL_MEMBER" msprop:Generator_RowDeletingName="TBL_MEMBERRowDeleting" msprop:Generator_RowChangingName="TBL_MEMBERRowChanging" msprop:Generator_RowEvHandlerName="TBL_MEMBERRowChangeEventHandler" msprop:Generator_RowDeletedName="TBL_MEMBERRowDeleted" msprop:Generator_UserTableName="TBL_MEMBER" msprop:Generator_RowChangedName="TBL_MEMBERRowChanged" msprop:Generator_RowEvArgName="TBL_MEMBERRowChangeEvent" msprop:Generator_RowClassName="TBL_MEMBERRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id_member" msprop:Generator_ColumnVarNameInTable="columnid_member"
-                          msprop:Generator_ColumnPropNameInRow="id_member"
-                          msprop:Generator_ColumnPropNameInTable="id_memberColumn"
-                          msprop:Generator_UserColumnName="id_member" type="xs:int" />
-              <xs:element name="nama_member" msprop:Generator_ColumnVarNameInTable="columnnama_member"
-                          msprop:Generator_ColumnPropNameInRow="nama_member"
-                          msprop:Generator_ColumnPropNameInTable="nama_memberColumn"
-                          msprop:Generator_UserColumnName="nama_member" minOccurs="0">
+              <xs:element name="id_member" msprop:Generator_ColumnVarNameInTable="columnid_member" msprop:Generator_ColumnPropNameInRow="id_member" msprop:Generator_ColumnPropNameInTable="id_memberColumn" msprop:Generator_UserColumnName="id_member" type="xs:int" />
+              <xs:element name="nama_member" msprop:Generator_ColumnVarNameInTable="columnnama_member" msprop:Generator_ColumnPropNameInRow="nama_member" msprop:Generator_ColumnPropNameInTable="nama_memberColumn" msprop:Generator_UserColumnName="nama_member" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="gender" msprop:Generator_ColumnVarNameInTable="columngender"
-                          msprop:Generator_ColumnPropNameInRow="gender"
-                          msprop:Generator_ColumnPropNameInTable="genderColumn"
-                          msprop:Generator_UserColumnName="gender" minOccurs="0">
+              <xs:element name="gender" msprop:Generator_ColumnVarNameInTable="columngender" msprop:Generator_ColumnPropNameInRow="gender" msprop:Generator_ColumnPropNameInTable="genderColumn" msprop:Generator_UserColumnName="gender" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="alamat" msprop:Generator_ColumnVarNameInTable="columnalamat"
-                          msprop:Generator_ColumnPropNameInRow="alamat"
-                          msprop:Generator_ColumnPropNameInTable="alamatColumn"
-                          msprop:Generator_UserColumnName="alamat" minOccurs="0">
+              <xs:element name="alamat" msprop:Generator_ColumnVarNameInTable="columnalamat" msprop:Generator_ColumnPropNameInRow="alamat" msprop:Generator_ColumnPropNameInTable="alamatColumn" msprop:Generator_UserColumnName="alamat" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="status_anggota" msprop:Generator_ColumnVarNameInTable="columnstatus_anggota"
-                          msprop:Generator_ColumnPropNameInRow="status_anggota"
-                          msprop:Generator_ColumnPropNameInTable="status_anggotaColumn"
-                          msprop:Generator_UserColumnName="status_anggota" minOccurs="0">
+              <xs:element name="status_anggota" msprop:Generator_ColumnVarNameInTable="columnstatus_anggota" msprop:Generator_ColumnPropNameInRow="status_anggota" msprop:Generator_ColumnPropNameInTable="status_anggotaColumn" msprop:Generator_UserColumnName="status_anggota" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="nama_kelas" msprop:Generator_ColumnVarNameInTable="columnnama_kelas"
-                          msprop:Generator_ColumnPropNameInRow="nama_kelas"
-                          msprop:Generator_ColumnPropNameInTable="nama_kelasColumn"
-                          msprop:Generator_UserColumnName="nama_kelas" minOccurs="0">
+              <xs:element name="nama_kelas" msprop:Generator_ColumnVarNameInTable="columnnama_kelas" msprop:Generator_ColumnPropNameInRow="nama_kelas" msprop:Generator_ColumnPropNameInTable="nama_kelasColumn" msprop:Generator_UserColumnName="nama_kelas" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -379,41 +225,19 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TBL_KELAS_SENAM" msprop:Generator_TableClassName="TBL_KELAS_SENAMDataTable"
-                    msprop:Generator_TableVarName="tableTBL_KELAS_SENAM"
-                    msprop:Generator_TablePropName="TBL_KELAS_SENAM"
-                    msprop:Generator_RowDeletingName="TBL_KELAS_SENAMRowDeleting"
-                    msprop:Generator_RowChangingName="TBL_KELAS_SENAMRowChanging"
-                    msprop:Generator_RowEvHandlerName="TBL_KELAS_SENAMRowChangeEventHandler"
-                    msprop:Generator_RowDeletedName="TBL_KELAS_SENAMRowDeleted"
-                    msprop:Generator_UserTableName="TBL_KELAS_SENAM"
-                    msprop:Generator_RowChangedName="TBL_KELAS_SENAMRowChanged"
-                    msprop:Generator_RowEvArgName="TBL_KELAS_SENAMRowChangeEvent"
-                    msprop:Generator_RowClassName="TBL_KELAS_SENAMRow">
+        <xs:element name="TBL_KELAS_SENAM" msprop:Generator_TableClassName="TBL_KELAS_SENAMDataTable" msprop:Generator_TableVarName="tableTBL_KELAS_SENAM" msprop:Generator_RowChangedName="TBL_KELAS_SENAMRowChanged" msprop:Generator_TablePropName="TBL_KELAS_SENAM" msprop:Generator_RowDeletingName="TBL_KELAS_SENAMRowDeleting" msprop:Generator_RowChangingName="TBL_KELAS_SENAMRowChanging" msprop:Generator_RowEvHandlerName="TBL_KELAS_SENAMRowChangeEventHandler" msprop:Generator_RowDeletedName="TBL_KELAS_SENAMRowDeleted" msprop:Generator_RowClassName="TBL_KELAS_SENAMRow" msprop:Generator_UserTableName="TBL_KELAS_SENAM" msprop:Generator_RowEvArgName="TBL_KELAS_SENAMRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id_kelas" msprop:Generator_ColumnVarNameInTable="columnid_kelas"
-                          msprop:Generator_ColumnPropNameInRow="id_kelas"
-                          msprop:Generator_ColumnPropNameInTable="id_kelasColumn"
-                          msprop:Generator_UserColumnName="id_kelas" type="xs:int" />
-              <xs:element name="nama_kelas" msprop:Generator_ColumnVarNameInTable="columnnama_kelas"
-                          msprop:Generator_ColumnPropNameInRow="nama_kelas"
-                          msprop:Generator_ColumnPropNameInTable="nama_kelasColumn"
-                          msprop:Generator_UserColumnName="nama_kelas" minOccurs="0">
+              <xs:element name="id_kelas" msprop:Generator_ColumnVarNameInTable="columnid_kelas" msprop:Generator_ColumnPropNameInRow="id_kelas" msprop:Generator_ColumnPropNameInTable="id_kelasColumn" msprop:Generator_UserColumnName="id_kelas" type="xs:int" />
+              <xs:element name="nama_kelas" msprop:Generator_ColumnVarNameInTable="columnnama_kelas" msprop:Generator_ColumnPropNameInRow="nama_kelas" msprop:Generator_ColumnPropNameInTable="nama_kelasColumn" msprop:Generator_UserColumnName="nama_kelas" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="tarif_perjam" msprop:Generator_ColumnVarNameInTable="columntarif_perjam"
-                          msprop:Generator_ColumnPropNameInRow="tarif_perjam"
-                          msprop:Generator_ColumnPropNameInTable="tarif_perjamColumn"
-                          msprop:Generator_UserColumnName="tarif_perjam" type="xs:int" minOccurs="0" />
-              <xs:element name="id_instruktur" msprop:Generator_ColumnVarNameInTable="columnid_instruktur"
-                          msprop:Generator_ColumnPropNameInRow="id_instruktur"
-                          msprop:Generator_ColumnPropNameInTable="id_instrukturColumn"
-                          msprop:Generator_UserColumnName="id_instruktur" type="xs:int" minOccurs="0" />
+              <xs:element name="tarif_perjam" msprop:Generator_ColumnVarNameInTable="columntarif_perjam" msprop:Generator_ColumnPropNameInRow="tarif_perjam" msprop:Generator_ColumnPropNameInTable="tarif_perjamColumn" msprop:Generator_UserColumnName="tarif_perjam" type="xs:int" minOccurs="0" />
+              <xs:element name="id_instruktur" msprop:Generator_ColumnVarNameInTable="columnid_instruktur" msprop:Generator_ColumnPropNameInRow="id_instruktur" msprop:Generator_ColumnPropNameInTable="id_instrukturColumn" msprop:Generator_UserColumnName="id_instruktur" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -428,4 +252,9 @@
       <xs:field xpath="mstns:id_kelas" />
     </xs:unique>
   </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="TBL_MEMBER_TBL_KELAS_SENAM" msdata:parent="TBL_MEMBER" msdata:child="TBL_KELAS_SENAM" msdata:parentkey="nama_kelas" msdata:childkey="nama_kelas" msprop:Generator_UserChildTable="TBL_KELAS_SENAM" msprop:Generator_ChildPropName="GetTBL_KELAS_SENAMRows" msprop:Generator_UserRelationName="TBL_MEMBER_TBL_KELAS_SENAM" msprop:Generator_ParentPropName="TBL_MEMBERRow" msprop:Generator_RelationVarName="relationTBL_MEMBER_TBL_KELAS_SENAM" msprop:Generator_UserParentTable="TBL_MEMBER" />
+    </xs:appinfo>
+  </xs:annotation>
 </xs:schema>

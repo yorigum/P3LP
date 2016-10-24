@@ -25,10 +25,12 @@ namespace PP7644.Boundary
             DG.Columns[6].HeaderText = "Jabatan";
 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoGenerateColumns = false;
         }
 
         public void searchDataGridView(DataGridView DG, string keyword)
         {
+            DG.DataSource = PC.searchPegawai(keyword);
             DG.DataSource = PC.showPegawai();
             DG.Columns[0].HeaderText = "ID";
             DG.Columns[1].HeaderText = "Nama";
@@ -84,6 +86,25 @@ namespace PP7644.Boundary
             var fm = new FormMO();
             fm.ShowDialog();
             Close();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tvNoID.Text = getKolom(dataGridView1, 0);
+            tvNama.Text = getKolom(dataGridView1, 1);
+        }
+        private string getKolom(DataGridView dg, int i)
+        {
+            return dg[dg.Columns[i].Index, dg.CurrentRow.Index].Value.ToString();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            searchDataGridView(dataGridView1,txtSearch.Text);
+            if (txtSearch.Text == "")
+            {
+                setDataGridView(dataGridView1);
+            }
         }
     }
 }

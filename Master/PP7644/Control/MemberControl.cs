@@ -21,6 +21,7 @@ namespace PP7644.Control
 
         public void addMember(KelolaMember M)
         {
+           // TM.InsertMember(M.Nama, M.Alamat,M.Gender, M.IdMember, M.Telepon, M.Datelahir);
         }
 
         //===========================

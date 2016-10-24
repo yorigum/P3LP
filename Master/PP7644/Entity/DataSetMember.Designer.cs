@@ -28,6 +28,8 @@ namespace PP7644.Entity {
         
         private TBL_KELAS_SENAMDataTable tableTBL_KELAS_SENAM;
         
+        private global::System.Data.DataRelation relationTBL_MEMBER_TBL_KELAS_SENAM;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -218,6 +220,7 @@ namespace PP7644.Entity {
                     this.tableTBL_KELAS_SENAM.InitVars();
                 }
             }
+            this.relationTBL_MEMBER_TBL_KELAS_SENAM = this.Relations["TBL_MEMBER_TBL_KELAS_SENAM"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -232,6 +235,10 @@ namespace PP7644.Entity {
             base.Tables.Add(this.tableTBL_MEMBER);
             this.tableTBL_KELAS_SENAM = new TBL_KELAS_SENAMDataTable();
             base.Tables.Add(this.tableTBL_KELAS_SENAM);
+            this.relationTBL_MEMBER_TBL_KELAS_SENAM = new global::System.Data.DataRelation("TBL_MEMBER_TBL_KELAS_SENAM", new global::System.Data.DataColumn[] {
+                        this.tableTBL_MEMBER.nama_kelasColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTBL_KELAS_SENAM.nama_kelasColumn}, false);
+            this.Relations.Add(this.relationTBL_MEMBER_TBL_KELAS_SENAM);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -757,13 +764,16 @@ namespace PP7644.Entity {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TBL_KELAS_SENAMRow AddTBL_KELAS_SENAMRow(int id_kelas, string nama_kelas, int tarif_perjam, int id_instruktur) {
+            public TBL_KELAS_SENAMRow AddTBL_KELAS_SENAMRow(int id_kelas, TBL_MEMBERRow parentTBL_MEMBERRowByTBL_MEMBER_TBL_KELAS_SENAM, int tarif_perjam, int id_instruktur) {
                 TBL_KELAS_SENAMRow rowTBL_KELAS_SENAMRow = ((TBL_KELAS_SENAMRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id_kelas,
-                        nama_kelas,
+                        null,
                         tarif_perjam,
                         id_instruktur};
+                if ((parentTBL_MEMBERRowByTBL_MEMBER_TBL_KELAS_SENAM != null)) {
+                    columnValuesArray[1] = parentTBL_MEMBERRowByTBL_MEMBER_TBL_KELAS_SENAM[5];
+                }
                 rowTBL_KELAS_SENAMRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTBL_KELAS_SENAMRow);
                 return rowTBL_KELAS_SENAMRow;
@@ -1105,6 +1115,17 @@ namespace PP7644.Entity {
             public void Setnama_kelasNull() {
                 this[this.tableTBL_MEMBER.nama_kelasColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TBL_KELAS_SENAMRow[] GetTBL_KELAS_SENAMRows() {
+                if ((this.Table.ChildRelations["TBL_MEMBER_TBL_KELAS_SENAM"] == null)) {
+                    return new TBL_KELAS_SENAMRow[0];
+                }
+                else {
+                    return ((TBL_KELAS_SENAMRow[])(base.GetChildRows(this.Table.ChildRelations["TBL_MEMBER_TBL_KELAS_SENAM"])));
+                }
+            }
         }
         
         /// <summary>
@@ -1177,6 +1198,17 @@ namespace PP7644.Entity {
                 }
                 set {
                     this[this.tableTBL_KELAS_SENAM.id_instrukturColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TBL_MEMBERRow TBL_MEMBERRow {
+                get {
+                    return ((TBL_MEMBERRow)(this.GetParentRow(this.Table.ParentRelations["TBL_MEMBER_TBL_KELAS_SENAM"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["TBL_MEMBER_TBL_KELAS_SENAM"]);
                 }
             }
             
@@ -1432,24 +1464,28 @@ namespace PP7644.Entity.DataSetMemberTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        TBL_MEMBER.id_member, TBL_MEMBER.nama_member, TBL_MEMBER.gender, TBL_MEMBER.alamat, TBL_MEMBER.status_anggota, TBL_KELAS_SENAM.nama_kelas
-FROM            TBL_MEMBER INNER JOIN
-                         TBL_KELAS_SENAM ON TBL_MEMBER.id_kelas = TBL_KELAS_SENAM.id_kelas
-ORDER BY TBL_MEMBER.id_member DESC";
+            this._commandCollection[0].CommandText = @"
+                      SELECT        TBL_MEMBER.id_member, TBL_MEMBER.nama_member, TBL_MEMBER.gender, TBL_MEMBER.alamat, TBL_MEMBER.status_anggota, TBL_KELAS_SENAM.nama_kelas
+                      FROM            TBL_MEMBER INNER JOIN
+                      TBL_KELAS_SENAM ON TBL_MEMBER.id_kelas = TBL_KELAS_SENAM.id_kelas
+                      ORDER BY TBL_MEMBER.id_member DESC
+                    ";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT        TBL_MEMBER.id_member, TBL_MEMBER.nama_member, TBL_MEMBER.gender, TBL_MEMBER.alamat, TBL_MEMBER.status_anggota, TBL_KELAS_SENAM.nama_kelas, 
-                         CAST(TBL_MEMBER.id_member AS varchar(MAX)) AS searchFunc
-FROM            TBL_MEMBER INNER JOIN
-                         TBL_KELAS_SENAM ON TBL_MEMBER.id_kelas = TBL_KELAS_SENAM.id_kelas
-WHERE        (TBL_MEMBER.nama_member LIKE '%' + @keyword + '%') OR
-                         (TBL_MEMBER.gender LIKE '%' + @keyword + '%') OR
-                         (TBL_MEMBER.alamat LIKE '%' + @keyword + '%') OR
-                         (TBL_MEMBER.status_anggota LIKE '%' + @keyword + '%') OR
-                         (TBL_KELAS_SENAM.nama_kelas LIKE '%' + @keyword + '%') OR
-                         (CAST(TBL_MEMBER.id_member AS varchar(MAX)) LIKE '%' + @keyword + '%')
-ORDER BY TBL_MEMBER.id_member DESC";
+            this._commandCollection[1].CommandText = @"
+                      SELECT        TBL_MEMBER.id_member, TBL_MEMBER.nama_member, TBL_MEMBER.gender, TBL_MEMBER.alamat, TBL_MEMBER.status_anggota, TBL_KELAS_SENAM.nama_kelas,
+                      CAST(TBL_MEMBER.id_member AS varchar(MAX)) AS searchFunc
+                      FROM            TBL_MEMBER INNER JOIN
+                      TBL_KELAS_SENAM ON TBL_MEMBER.id_kelas = TBL_KELAS_SENAM.id_kelas
+                      WHERE        (TBL_MEMBER.nama_member LIKE '%' + @keyword + '%') OR
+                      (TBL_MEMBER.gender LIKE '%' + @keyword + '%') OR
+                      (TBL_MEMBER.alamat LIKE '%' + @keyword + '%') OR
+                      (TBL_MEMBER.status_anggota LIKE '%' + @keyword + '%') OR
+                      (TBL_KELAS_SENAM.nama_kelas LIKE '%' + @keyword + '%') OR
+                      (CAST(TBL_MEMBER.id_member AS varchar(MAX)) LIKE '%' + @keyword + '%')
+                      ORDER BY TBL_MEMBER.id_member DESC
+                    ";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@keyword", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "nama_member", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
@@ -1706,8 +1742,10 @@ ORDER BY TBL_MEMBER.id_member DESC";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_instruktur", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_instruktur", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [TBL_KELAS_SENAM] ([id_kelas], [nama_kelas], [tarif_perjam], [id_instruktur]) VALUES (@id_kelas, @nama_kelas, @tarif_perjam, @id_instruktur);
-SELECT id_kelas, nama_kelas, tarif_perjam, id_instruktur FROM TBL_KELAS_SENAM WHERE (id_kelas = @id_kelas)";
+            this._adapter.InsertCommand.CommandText = @"
+                      INSERT INTO [TBL_KELAS_SENAM] ([id_kelas], [nama_kelas], [tarif_perjam], [id_instruktur]) VALUES (@id_kelas, @nama_kelas, @tarif_perjam, @id_instruktur);
+                      SELECT id_kelas, nama_kelas, tarif_perjam, id_instruktur FROM TBL_KELAS_SENAM WHERE (id_kelas = @id_kelas)
+                    ";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_kelas", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_kelas", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nama_kelas", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nama_kelas", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1715,8 +1753,10 @@ SELECT id_kelas, nama_kelas, tarif_perjam, id_instruktur FROM TBL_KELAS_SENAM WH
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_instruktur", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_instruktur", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [TBL_KELAS_SENAM] SET [id_kelas] = @id_kelas, [nama_kelas] = @nama_kelas, [tarif_perjam] = @tarif_perjam, [id_instruktur] = @id_instruktur WHERE (([id_kelas] = @Original_id_kelas) AND ((@IsNull_nama_kelas = 1 AND [nama_kelas] IS NULL) OR ([nama_kelas] = @Original_nama_kelas)) AND ((@IsNull_tarif_perjam = 1 AND [tarif_perjam] IS NULL) OR ([tarif_perjam] = @Original_tarif_perjam)) AND ((@IsNull_id_instruktur = 1 AND [id_instruktur] IS NULL) OR ([id_instruktur] = @Original_id_instruktur)));
-SELECT id_kelas, nama_kelas, tarif_perjam, id_instruktur FROM TBL_KELAS_SENAM WHERE (id_kelas = @id_kelas)";
+            this._adapter.UpdateCommand.CommandText = @"
+                      UPDATE [TBL_KELAS_SENAM] SET [id_kelas] = @id_kelas, [nama_kelas] = @nama_kelas, [tarif_perjam] = @tarif_perjam, [id_instruktur] = @id_instruktur WHERE (([id_kelas] = @Original_id_kelas) AND ((@IsNull_nama_kelas = 1 AND [nama_kelas] IS NULL) OR ([nama_kelas] = @Original_nama_kelas)) AND ((@IsNull_tarif_perjam = 1 AND [tarif_perjam] IS NULL) OR ([tarif_perjam] = @Original_tarif_perjam)) AND ((@IsNull_id_instruktur = 1 AND [id_instruktur] IS NULL) OR ([id_instruktur] = @Original_id_instruktur)));
+                      SELECT id_kelas, nama_kelas, tarif_perjam, id_instruktur FROM TBL_KELAS_SENAM WHERE (id_kelas = @id_kelas)
+                    ";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_kelas", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_kelas", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nama_kelas", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nama_kelas", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1741,18 +1781,31 @@ SELECT id_kelas, nama_kelas, tarif_perjam, id_instruktur FROM TBL_KELAS_SENAM WH
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        id_kelas, nama_kelas, tarif_perjam, id_instruktur\r\nFROM            " +
-                "TBL_KELAS_SENAM";
+            this._commandCollection[0].CommandText = "\r\n                      SELECT        id_kelas, nama_kelas, tarif_perjam, id_inst" +
+                "ruktur\r\n                      FROM            TBL_KELAS_SENAM\r\n                 " +
+                "   ";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        id_kelas\r\nFROM            TBL_KELAS_SENAM\r\nWHERE        (nama_kelas" +
-                " = @kelas)";
+            this._commandCollection[1].CommandText = "\r\n                      SELECT        id_kelas\r\n                      FROM       " +
+                "     TBL_KELAS_SENAM\r\n                      WHERE        (nama_kelas = @kelas)\r\n" +
+                "                    ";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@kelas", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "nama_kelas", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"INSERT INTO TBL_KELAS_SENAM
+                         (tarif_perjam, nama_kelas)
+VALUES        (@tarif_perjam,@nama_kelas); 
+                      SELECT id_kelas, nama_kelas, tarif_perjam, id_instruktur FROM TBL_KELAS_SENAM WHERE (id_kelas = @id_kelas)
+                    ";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tarif_perjam", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "tarif_perjam", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nama_kelas", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "nama_kelas", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_kelas", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_kelas", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1999,6 +2052,42 @@ SELECT id_kelas, nama_kelas, tarif_perjam, id_instruktur FROM TBL_KELAS_SENAM WH
             else {
                 return new global::System.Nullable<int>(((int)(returnValue)));
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int InsertKelas(global::System.Nullable<int> tarif_perjam, string nama_kelas, int id_kelas) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            if ((tarif_perjam.HasValue == true)) {
+                command.Parameters[0].Value = ((int)(tarif_perjam.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((nama_kelas == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(nama_kelas));
+            }
+            command.Parameters[2].Value = ((int)(id_kelas));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     

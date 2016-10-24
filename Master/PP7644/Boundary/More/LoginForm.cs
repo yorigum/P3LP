@@ -94,5 +94,34 @@ namespace PP7644.Boundary
         {
             throw new NotImplementedException();
         }
+
+        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                DialogResult result = MessageBox.Show("Apakah Anda yakin ingin menutup program??", "Keluar Program", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    Environment.Exit(0);
+                }
+                else
+                {
+                   // e.= true;
+                    Hide();
+                    var lf = new LoginForm();
+                    lf.ShowDialog();
+                    Close();
+                }
+            }
+            else
+            {
+                Hide();
+                var lf = new LoginForm();
+                lf.ShowDialog();
+                Close();
+            }
+        }
+
+        
     }
 }

@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PP7644.exe" size="590848">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PP7644.exe" size="597504">
       <assemblyIdentity name="PP7644" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xFTAKrrHFUkfSN1/op3cDSF6moFVV+D+hDjUoE/Sm4I=</dsig:DigestValue>
+        <dsig:DigestValue>fvmOuvKL8wVpOb3KZvM/rusRKwlH8NYWURO88qQR9D4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
