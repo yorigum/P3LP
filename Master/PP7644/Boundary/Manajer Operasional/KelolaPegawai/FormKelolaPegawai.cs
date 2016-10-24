@@ -1,25 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using PP7644.Control;
 using PP7644.Entity;
 
 namespace PP7644.Boundary
 {
     public partial class FormKelolaPegawai : Form
     {
+        private readonly PegawaiControl PC = new PegawaiControl();
+
         public FormKelolaPegawai()
         {
             InitializeComponent();
         }
-
-        PegawaiControl PC=new PegawaiControl();
 
         public void setDataGridView(DataGridView DG)
         {
@@ -32,8 +24,7 @@ namespace PP7644.Boundary
             DG.Columns[5].HeaderText = "Telepon";
             DG.Columns[6].HeaderText = "Jabatan";
 
-            this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         public void searchDataGridView(DataGridView DG, string keyword)
@@ -47,45 +38,52 @@ namespace PP7644.Boundary
             DG.Columns[5].HeaderText = "Telepon";
             DG.Columns[6].HeaderText = "Jabatan";
 
-            this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void FormUtama_Load(object sender, EventArgs e)
         {
-
             setDataGridView(dataGridView1);
-
         }
 
         public void setTextLabel(string text)
         {
-            this.lblUserLogin.Text = text;
+            lblUserLogin.Text = "Pengguna: Manajer Operasional - " + UppercaseFirst(LoginForm.user);
+        }
+
+        private static string UppercaseFirst(string s)
+        {
+            if (string.IsNullOrEmpty(s))
+            {
+                return string.Empty;
+            }
+            var a = s.ToCharArray();
+            a[0] = char.ToUpper(a[0]);
+            return new string(a);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-
         }
 
         private void lblExit_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            LoginForm lf = new LoginForm();
+            Hide();
+            var lf = new LoginForm();
             lf.ShowDialog();
-            this.Close();
+            Close();
         }
 
         private void btnSelesai_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormMO fm = new FormMO();
+            Hide();
+            var fm = new FormMO();
             fm.ShowDialog();
-            this.Close();
+            Close();
         }
     }
 }

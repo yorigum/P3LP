@@ -1,61 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PP7644.Entity
 {
-    class PegawaiEntity
+    internal class PegawaiEntity
     {
-        string nama, alamat, gender, jabatan, contact;
-        DateTime tglLahir;
-
         public PegawaiEntity(string nama, string alamat, string gender, string jabatan, string contact,
             DateTime tglLahir)
         {
-            this.nama = nama;
-            this.alamat = alamat;
-            this.gender = gender;
-            this.jabatan = jabatan;
-            this.contact = contact;
-            this.tglLahir = tglLahir;
+            Nama = nama;
+            Alamat = alamat;
+            Gender = gender;
+            Jabatan = jabatan;
+            Contact = contact;
+            TglLahir = tglLahir;
         }
 
-        public string Nama
-        {
-            get { return nama; }
-            set { nama = value; }
-        }
+        public string Nama { get; set; }
 
-        public string Alamat
-        {
-            get { return alamat; }
-            set { alamat = value; }
-        }
+        public string Alamat { get; set; }
 
-        public string Gender
-        {
-            get { return gender; }
-            set { gender = value; }
-        }
+        public string Gender { get; set; }
 
-        public string Jabatan
-        {
-            get { return jabatan; }
-            set { jabatan = value; }
-        }
+        public string Jabatan { get; set; }
 
-        public string Contact
-        {
-            get { return contact; }
-            set { contact = value; }
-        }
+        public string Contact { get; set; }
 
-        public DateTime TglLahir
-        {
-            get { return tglLahir; }
-            set { tglLahir = value; }
-        }
+        public DateTime TglLahir { get; set; }
     }
 }

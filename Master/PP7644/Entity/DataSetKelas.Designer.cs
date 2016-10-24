@@ -860,14 +860,37 @@ namespace PP7644.Entity.DataSetKelasTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        TBL_KELAS_SENAM.id_kelas, TBL_KELAS_SENAM.nama_kelas, TBL_KELAS_SENAM.tarif_perjam, TBL_PEGAWAI.nama_pegawai
-FROM            TBL_KELAS_SENAM INNER JOIN
-                         TBL_INSTRUKTUR ON TBL_KELAS_SENAM.id_kelas = TBL_INSTRUKTUR.id_kelas INNER JOIN
-                         TBL_PEGAWAI ON TBL_INSTRUKTUR.id_pegawai = TBL_PEGAWAI.id_pegawai";
+            this._commandCollection[0].CommandText = @"
+                      SELECT        TBL_KELAS_SENAM.id_kelas, TBL_KELAS_SENAM.nama_kelas, TBL_KELAS_SENAM.tarif_perjam, TBL_PEGAWAI.nama_pegawai
+                      FROM            TBL_KELAS_SENAM INNER JOIN
+                      TBL_INSTRUKTUR ON TBL_KELAS_SENAM.id_kelas = TBL_INSTRUKTUR.id_kelas INNER JOIN
+                      TBL_PEGAWAI ON TBL_INSTRUKTUR.id_pegawai = TBL_PEGAWAI.id_pegawai
+                    ";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"
+                      SELECT        TBL_KELAS_SENAM.id_kelas, TBL_KELAS_SENAM.nama_kelas, TBL_KELAS_SENAM.tarif_perjam, TBL_PEGAWAI.nama_pegawai
+                      FROM            TBL_KELAS_SENAM INNER JOIN
+                      TBL_INSTRUKTUR ON TBL_KELAS_SENAM.id_kelas = TBL_INSTRUKTUR.id_kelas INNER JOIN
+                      TBL_PEGAWAI ON TBL_INSTRUKTUR.id_pegawai = TBL_PEGAWAI.id_pegawai
+                      WHERE        (TBL_KELAS_SENAM.nama_kelas LIKE '%' + @keyword + '%') OR
+                      (TBL_PEGAWAI.nama_pegawai LIKE '%' + @keyword + '%')
+                    ";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@keyword", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "nama_kelas", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "\r\n                      INSERT INTO TBL_KELAS_SENAM\r\n                      (nama_" +
+                "kelas, tarif_perjam, id_instruktur)\r\n                      VALUES        (@nama," +
+                "@tarif,@idinstruktur)\r\n                    ";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nama", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "nama_kelas", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tarif", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "tarif_perjam", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idinstruktur", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "id_instruktur", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -892,6 +915,64 @@ FROM            TBL_KELAS_SENAM INNER JOIN
             DataSetKelas.TBL_KELAS_SENAMDataTable dataTable = new DataSetKelas.TBL_KELAS_SENAMDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DataSetKelas.TBL_KELAS_SENAMDataTable GetDataBy(string keyword) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((keyword == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(keyword));
+            }
+            DataSetKelas.TBL_KELAS_SENAMDataTable dataTable = new DataSetKelas.TBL_KELAS_SENAMDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int InsertKelas(string nama, global::System.Nullable<int> tarif, string idinstruktur) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            if ((nama == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(nama));
+            }
+            if ((tarif.HasValue == true)) {
+                command.Parameters[1].Value = ((int)(tarif.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((idinstruktur == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(idinstruktur));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     

@@ -1,26 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using PP7644.Control;
+using PP7644.Entity;
 
 namespace PP7644.Boundary.Kasir.Kelola_Member
 {
     public partial class UC_AddMember : UserControl
     {
+        private int flagcommand;
+
+        private MemberControl MC = new MemberControl();
+
         public UC_AddMember()
         {
             InitializeComponent();
         }
 
-        MemberControl MC = new MemberControl();
-
-        int flagcommand = 0;
         public void setFlag(int flag)
         {
             flagcommand = flag;
@@ -28,13 +23,11 @@ namespace PP7644.Boundary.Kasir.Kelola_Member
 
         private void UC_AddMember_Load(object sender, EventArgs e)
         {
-          
-
         }
 
         private bool cekInput()
         {
-            bool temp = true;
+            var temp = true;
 
             if (txtNama.Text == "")
             {
@@ -82,7 +75,6 @@ namespace PP7644.Boundary.Kasir.Kelola_Member
                 errorProvider1.SetError(dateLahir, "Silahkan pilih tanggal lahir.");
                 radioMale.Focus();
                 temp = false;
-                
             }
 
             return temp;
@@ -90,12 +82,10 @@ namespace PP7644.Boundary.Kasir.Kelola_Member
 
         private void label1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void clearInput()
@@ -111,14 +101,15 @@ namespace PP7644.Boundary.Kasir.Kelola_Member
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
-            if (flagcommand == 1)//tambah data
+            if (flagcommand == 1) //tambah data
             {
-                if (cekInput() == true)
+                if (cekInput())
                 {
                     errorProvider1.Clear();
-                  //  PP7644.Entity.KelolaMember KM = new Entity.KelolaMember(txtNama.Text, lblIDMember.Text, txtAlamat.Text, txtTelepon.Text, txtIDno.Text,"","","",dateLahir.Value.ToShortDateString());
+                    var KM = new KelolaMember(txtNama.Text, lblIDMember.Text, txtAlamat.Text, txtTelepon.Text,
+                        txtIDno.Text, Convert.ToDateTime(dateLahir.Value.ToString()));
                     this.Hide();
-                    FormKelolaMember myParent = (FormKelolaMember)this.Parent;
+                    var myParent = (FormKelolaMember) Parent;
                     myParent.Enable();
                 }
             }
@@ -127,10 +118,17 @@ namespace PP7644.Boundary.Kasir.Kelola_Member
         private void btnBatal_Click(object sender, EventArgs e)
         {
             clearInput();
-            //errorProvider1.Clear();
+            errorProvider1.Clear();
             this.Hide();
-            FormKelolaMember myParent = (FormKelolaMember)this.Parent;
+            var myParent = (FormKelolaMember)this.Parent;
             myParent.Enable();
+           // setEnableParent();
+ 
+        }
+
+        public void setEnableParent()
+        {
+           
         }
     }
 }

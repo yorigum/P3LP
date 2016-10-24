@@ -1,51 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PP7644.Entity
 {
-    class KelolaMember
+    internal class KelolaMember
     {
-        string nama, id_member, notelpon, noID, alamat, kelasSenam, gender, status_anggota;
-
+        //txtNama.Text, lblIDMember.Text, txtAlamat.Text, txtTelepon.Text, txtIDno.Text,"","","",dateLahir.Value.ToShortDateString()
+        private string nama;
+        private string idMember;
+        private string alamat;
+        private string telepon;
+        private string noidentitas;
+        private DateTime datelahir;
         
-        DateTime tglLahir;
-
-        public KelolaMember(string nama,string id_member,string alamat,string notelpon,string noID,string gender,string kelasSenam,string status_anggota,DateTime tglLahir)
+        public KelolaMember(string nama, string idMember , string alamat, string telepon, string noidentitas, DateTime dateLahir)
         {
-            this.nama=nama;
-            this.id_member=id_member;
-            this.noID = noID;
-            this.notelpon = notelpon;
-            this.alamat=alamat;
-            this.kelasSenam=kelasSenam;
-            this.status_anggota=status_anggota;
-            this.tglLahir=tglLahir;
-        }
-         public string Status_anggota
-        {
-         get { return status_anggota; }
-            set { status_anggota = value; }
-        }
-
-        public string Alamat
-        {
-             get { return alamat; }
-                set { alamat = value; }
-        }
-
-        public string KelasSenam
-        {
-             get { return kelasSenam; }
-            set { kelasSenam = value; }
-        }
-
-        public string Id_member
-        {
-            get { return id_member; }
-            set { id_member = value; }
+            // TODO: Complete member initialization
+            this.nama = nama;
+            this.alamat = alamat;
+            this.telepon = telepon;
+            this.noidentitas = noidentitas;
+            this.datelahir = dateLahir;
         }
 
         public string Nama
@@ -54,30 +28,34 @@ namespace PP7644.Entity
             set { nama = value; }
         }
 
-        public DateTime TglLahir
+        public string IdMember
         {
-            get { return tglLahir; }
-            set { tglLahir = value; }
+            get { return idMember; }
+            set { idMember = value; }
         }
 
-        public string Notelpon
+        public string Alamat
         {
-            get { return notelpon; }
-            set { notelpon = value; }
+            get { return alamat; }
+            set { alamat = value; }
         }
 
-        public string NoID
+        public string Telepon
         {
-            get { return noID; }
-            set { noID = value; }
+            get { return telepon; }
+            set { telepon = value; }
         }
 
-        public string Gender
+        public string Noidentitas
         {
-            get { return gender; }
-            set { gender = value; }
+            get { return noidentitas; }
+            set { noidentitas = value; }
         }
-       
 
+        public DateTime Datelahir
+        {
+            get { return datelahir; }
+            set { datelahir = value; }
+        }
     }
 }

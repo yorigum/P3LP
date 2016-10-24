@@ -22,8 +22,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -109,6 +108,12 @@
     </Compile>
     <Compile Include="Boundary\Manajer Operasional\KelolaKelas\FormKelolaKelas.Designer.cs">
       <DependentUpon>FormKelolaKelas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boundary\Manajer Operasional\KelolaKelas\FormOperasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boundary\Manajer Operasional\KelolaKelas\FormOperasi.Designer.cs">
+      <DependentUpon>FormOperasi.cs</DependentUpon>
     </Compile>
     <Compile Include="Boundary\Manajer Operasional\KelolaPegawai\FormKelolaPegawai.cs">
       <SubType>Form</SubType>
@@ -198,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Boundary\Manajer Operasional\KelolaKelas\FormKelolaKelas.resx">
       <DependentUpon>FormKelolaKelas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boundary\Manajer Operasional\KelolaKelas\FormOperasi.resx">
+      <DependentUpon>FormOperasi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Boundary\Manajer Operasional\KelolaPegawai\FormKelolaPegawai.resx">
       <DependentUpon>FormKelolaPegawai.cs</DependentUpon>

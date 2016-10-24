@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PP7644.Entity.DataSetMemberTableAdapters;
+﻿using System.Data;
 using PP7644.Entity;
-using System.Data;
+using PP7644.Entity.DataSetMemberTableAdapters;
 
 namespace PP7644.Control
 {
-    class MemberControl
+    internal class MemberControl
     {
-        private TBL_MEMBERTableAdapter TM = new TBL_MEMBERTableAdapter();
-        private TBL_KELAS_SENAMTableAdapter TS = new TBL_KELAS_SENAMTableAdapter();
-        
+        private readonly TBL_MEMBERTableAdapter TM = new TBL_MEMBERTableAdapter();
+        private readonly TBL_KELAS_SENAMTableAdapter TS = new TBL_KELAS_SENAMTableAdapter();
+
         public DataTable showMember()
         {
             return TM.GetData();
@@ -26,7 +21,6 @@ namespace PP7644.Control
 
         public void addMember(KelolaMember M)
         {
-           
         }
 
         //===========================

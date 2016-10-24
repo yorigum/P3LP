@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using PP7644.Control;
 
@@ -13,12 +6,13 @@ namespace PP7644.Boundary
 {
     public partial class FormKelolaMember : Form
     {
+        private readonly MemberControl MC = new MemberControl();
+
         public FormKelolaMember()
         {
             InitializeComponent();
-
         }
-        MemberControl MC = new MemberControl();
+
         public void setDataGridView(DataGridView DG)
         {
             DG.DataSource = MC.showMember();
@@ -29,10 +23,10 @@ namespace PP7644.Boundary
             DG.Columns[4].HeaderText = "Status";
             DG.Columns[5].HeaderText = "Kelas Senam";
 
-            this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
-        public void searchDataGridView(DataGridView DG,string keyword)
+        public void searchDataGridView(DataGridView DG, string keyword)
         {
             DG.DataSource = MC.showMember();
             DG.Columns[0].HeaderText = "ID";
@@ -42,59 +36,58 @@ namespace PP7644.Boundary
             DG.Columns[4].HeaderText = "Status";
             DG.Columns[5].HeaderText = "Kelas Senam";
 
-            this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
 
         private void pengelolaanDataPegawaiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
         }
 
         private void FormUtama_Load(object sender, EventArgs e)
         {
-            setDataGridView(this.dataGridView1);
-           // uC_AddMember1.Visible = false;
+            setDataGridView(dataGridView1);
+            uC_AddMember1.Visible = false;
         }
 
         public void setTextLabel(string text)
         {
-            this.lblUserLogin.Text = "Pengguna: Kasir - " + UppercaseFirst(LoginForm.user);
+            lblUserLogin.Text = "Pengguna: Kasir - " + UppercaseFirst(LoginForm.user);
         }
-        static string UppercaseFirst(string s)
+
+        private static string UppercaseFirst(string s)
         {
             if (string.IsNullOrEmpty(s))
             {
                 return string.Empty;
             }
-            char[] a = s.ToCharArray();
+            var a = s.ToCharArray();
             a[0] = char.ToUpper(a[0]);
             return new string(a);
         }
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-
         }
 
         private void lblExit_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            LoginForm lf = new LoginForm();
+            Hide();
+            var lf = new LoginForm();
             lf.ShowDialog();
-            this.Close();
+            Close();
         }
 
         private void btnBatal_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormKasir fk = new FormKasir();
+            Hide();
+            var fk = new FormKasir();
             fk.ShowDialog();
-            this.Close();
+            Close();
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -123,17 +116,16 @@ namespace PP7644.Boundary
             btnTambah.Enabled = true;
             btnSelesai.Enabled = true;
 
-            setDataGridView(this.dataGridView1);
+            setDataGridView(dataGridView1);
             dataGridView1.Rows[0].Selected = true;
         }
 
         private void btnTambah_Click(object sender, EventArgs e)
         {
-            //uC_AddMember1.setFlag(1);
-            //uC_AddMember1.Visible = true;
-            //disable();
+            uC_AddMember1.setFlag(1);
+            uC_AddMember1.Visible = true;
+            disable();
         }
-
 
 
         internal void Enable()

@@ -58,6 +58,7 @@
             this.lblUser = new System.Windows.Forms.Label();
             this.tabAktivasi = new System.Windows.Forms.TabPage();
             this.tabDeposit = new System.Windows.Forms.TabPage();
+            this.uC_AddMember1 = new PP7644.Boundary.Kasir.Kelola_Member.UC_AddMember();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -99,7 +100,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(2, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1078, 570);
+            this.panel1.Size = new System.Drawing.Size(1084, 570);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -131,7 +132,7 @@
             this.panel2.Controls.Add(this.tabControl1);
             this.panel2.Location = new System.Drawing.Point(0, 117);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1078, 453);
+            this.panel2.Size = new System.Drawing.Size(1081, 453);
             this.panel2.TabIndex = 0;
             // 
             // tabControl1
@@ -139,7 +140,7 @@
             this.tabControl1.Controls.Add(this.tabRegist);
             this.tabControl1.Controls.Add(this.tabAktivasi);
             this.tabControl1.Controls.Add(this.tabDeposit);
-            this.tabControl1.Font = new System.Drawing.Font("Segoe UI Black", 8.25F, System.Drawing.FontStyle.Bold);
+            this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -148,6 +149,7 @@
             // 
             // tabRegist
             // 
+            this.tabRegist.Controls.Add(this.uC_AddMember1);
             this.tabRegist.Controls.Add(this.btnSelesai);
             this.tabRegist.Controls.Add(this.btnBatal);
             this.tabRegist.Controls.Add(this.btnHapus);
@@ -214,7 +216,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI Black", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnSearch.Location = new System.Drawing.Point(956, 23);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(94, 23);
@@ -376,7 +378,7 @@
             this.tabAktivasi.Location = new System.Drawing.Point(4, 22);
             this.tabAktivasi.Name = "tabAktivasi";
             this.tabAktivasi.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAktivasi.Size = new System.Drawing.Size(1065, 427);
+            this.tabAktivasi.Size = new System.Drawing.Size(1057, 427);
             this.tabAktivasi.TabIndex = 1;
             this.tabAktivasi.Text = "Aktivasi Member";
             this.tabAktivasi.UseVisualStyleBackColor = true;
@@ -385,10 +387,17 @@
             // 
             this.tabDeposit.Location = new System.Drawing.Point(4, 22);
             this.tabDeposit.Name = "tabDeposit";
-            this.tabDeposit.Size = new System.Drawing.Size(1065, 427);
+            this.tabDeposit.Size = new System.Drawing.Size(1057, 427);
             this.tabDeposit.TabIndex = 2;
             this.tabDeposit.Text = "Deposit Member";
             this.tabDeposit.UseVisualStyleBackColor = true;
+            // 
+            // uC_AddMember1
+            // 
+            this.uC_AddMember1.Location = new System.Drawing.Point(324, 30);
+            this.uC_AddMember1.Name = "uC_AddMember1";
+            this.uC_AddMember1.Size = new System.Drawing.Size(460, 376);
+            this.uC_AddMember1.TabIndex = 9;
             // 
             // FormKelolaMember
             // 
@@ -450,6 +459,7 @@
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.Label lblpass;
         private System.Windows.Forms.Label lblUser;
+        private Kasir.Kelola_Member.UC_AddMember uC_AddMember1;
 
     }
 }

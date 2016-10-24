@@ -93,7 +93,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(2, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1073, 570);
+            this.panel1.Size = new System.Drawing.Size(1118, 570);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -133,7 +133,7 @@
             this.panel2.Controls.Add(this.gbPegawai);
             this.panel2.Location = new System.Drawing.Point(0, 99);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1073, 471);
+            this.panel2.Size = new System.Drawing.Size(1085, 471);
             this.panel2.TabIndex = 0;
             // 
             // btnSelesai
@@ -206,6 +206,7 @@
             this.btnTambah.TabIndex = 9;
             this.btnTambah.Text = "Tambah";
             this.btnTambah.UseVisualStyleBackColor = true;
+            this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
             // 
             // gbPegawai
             // 

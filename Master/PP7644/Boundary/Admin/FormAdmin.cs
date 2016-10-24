@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using PP7644.Control;
 
@@ -13,12 +6,12 @@ namespace PP7644.Boundary
 {
     public partial class FormAdmin : Form
     {
+        private readonly MenuAdminControl MAC = new MenuAdminControl();
+
         public FormAdmin()
         {
             InitializeComponent();
         }
-
-        MenuAdminControl MAC = new MenuAdminControl();
 
         public void setDatagridview(DataGridView DG)
         {
@@ -27,22 +20,32 @@ namespace PP7644.Boundary
 
         public void setTextLabel(string text)
         {
-            this.lblUserLogin.Text = text;
+            lblUserLogin.Text = "Pengguna: Admin - " + UppercaseFirst(LoginForm.user);
+        }
+
+        private static string UppercaseFirst(string s)
+        {
+            if (string.IsNullOrEmpty(s))
+            {
+                return string.Empty;
+            }
+            var a = s.ToCharArray();
+            a[0] = char.ToUpper(a[0]);
+            return new string(a);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            LoginForm lf = new LoginForm();
+            Hide();
+            var lf = new LoginForm();
             lf.Show();
-            this.Close();
+            Close();
         }
 
         private void FormAdmin_Load(object sender, EventArgs e)
         {
-            setDatagridview(this.dataGridView1);
-            this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
+            setDatagridview(dataGridView1);
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }
 }

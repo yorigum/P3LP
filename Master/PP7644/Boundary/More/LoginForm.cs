@@ -1,28 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using PP7644.Control;
-using PP7644.Boundary;
 
 namespace PP7644.Boundary
 {
     public partial class LoginForm : Form
     {
-
         public static string user;
+
+        private readonly LoginControl LC = new LoginControl();
+
         public LoginForm()
         {
+            this.MinimumSize = new Size(575,409);
+            this.MaximumSize = new Size(575,409);
+            this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
+                          (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
             InitializeComponent();
         }
 
-        LoginControl LC = new LoginControl();
-        
 
         public string setText(string set)
         {
@@ -31,50 +28,49 @@ namespace PP7644.Boundary
 
         private void btnLoginMenu_Click(object sender, EventArgs e)
         {
-          if (LC.cekLogin(txtUser.Text, txtPass.Text) == true)
+            if (LC.cekLogin(txtUser.Text, txtPass.Text))
             {
-                int role = LC.GetRoleUser(txtUser.Text, txtPass.Text);
+                var role = LC.GetRoleUser(txtUser.Text, txtPass.Text);
                 if (role == 1)
                 {
-                    this.Hide();
+                    Hide();
                     user = txtUser.Text;
-                    FormAdmin fr = new FormAdmin();
-                    fr.setTextLabel("Pengguna: Admin -"+txtUser.Text);
+                    var fr = new FormAdmin();
+                    fr.setTextLabel("Pengguna: Admin -" + txtUser.Text);
                     //fr.setVisibleMenu(true);
                     fr.ShowDialog();
-                    this.Close();
-                     }
+                    Close();
+                }
                 else if (role == 2)
                 {
-                    this.Hide();
+                    Hide();
                     user = txtUser.Text;
-                    FormMO fr = new FormMO();
+                    var fr = new FormMO();
                     fr.setTextLabel("Pengguna: Manajer Operasional -" + txtUser.Text);
-                   // fr.setVisibleMenu(true);
+                    // fr.setVisibleMenu(true);
                     fr.ShowDialog();
-                    this.Close();
+                    Close();
                 }
                 else if (role == 3)
                 {
-                    this.Hide();
+                    Hide();
                     user = txtUser.Text;
-                    FormKasir fr = new FormKasir();
+                    var fr = new FormKasir();
                     fr.setTextLabel("Pengguna: Kasir -" + txtUser.Text);
                     //fr.setVisibleMenu(true);
                     fr.ShowDialog();
-                    this.Close();
+                    Close();
                 }
                 else
                 {
                     MessageBox.Show("Tidak memiliki Role");
                 }
             }
-            else 
+            else
             {
                 MessageBox.Show("Username atau Password Salah!");
             }
         }
-               
 
 
         private void help_Click(object sender, EventArgs e)
@@ -84,14 +80,13 @@ namespace PP7644.Boundary
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-
         }
 
         private void btnExit_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             MessageBox.Show("Terimakasih");
-            this.Close();
+            Close();
         }
 
 

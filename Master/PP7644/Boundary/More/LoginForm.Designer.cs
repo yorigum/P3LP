@@ -40,7 +40,6 @@
             this.cbmasuk = new System.Windows.Forms.CheckBox();
             this.pict = new System.Windows.Forms.PictureBox();
             this.btnLoginMenu = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pict)).BeginInit();
             this.SuspendLayout();
             // 
@@ -167,24 +166,11 @@
             this.btnLoginMenu.UseVisualStyleBackColor = true;
             this.btnLoginMenu.Click += new System.EventHandler(this.btnLoginMenu_Click);
             // 
-            // btnExit
-            // 
-            this.btnExit.AutoSize = true;
-            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(533, 9);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(14, 13);
-            this.btnExit.TabIndex = 13;
-            this.btnExit.Text = "X";
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
-            // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(559, 370);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLoginMenu);
             this.Controls.Add(this.pict);
             this.Controls.Add(this.cbmasuk);
@@ -196,7 +182,7 @@
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.lblKeterangan);
             this.Controls.Add(this.lblAplikasi);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
@@ -219,7 +205,6 @@
         private System.Windows.Forms.CheckBox cbmasuk;
         private System.Windows.Forms.PictureBox pict;
         private System.Windows.Forms.Button btnLoginMenu;
-        private System.Windows.Forms.Label btnExit;
 
     }
 }
