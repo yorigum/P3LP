@@ -42,6 +42,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.keterangan = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -97,6 +98,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Aqua;
+            this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.btnIzinInstruktur);
             this.panel3.Controls.Add(this.btnPengelolaanKelas);
             this.panel3.Controls.Add(this.button2);
@@ -110,7 +112,7 @@
             // btnIzinInstruktur
             // 
             this.btnIzinInstruktur.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIzinInstruktur.Location = new System.Drawing.Point(0, 139);
+            this.btnIzinInstruktur.Location = new System.Drawing.Point(0, 177);
             this.btnIzinInstruktur.Name = "btnIzinInstruktur";
             this.btnIzinInstruktur.Size = new System.Drawing.Size(169, 38);
             this.btnIzinInstruktur.TabIndex = 4;
@@ -131,7 +133,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(0, 209);
+            this.button2.Location = new System.Drawing.Point(0, 245);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(169, 38);
             this.button2.TabIndex = 2;
@@ -142,7 +144,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 174);
+            this.button1.Location = new System.Drawing.Point(0, 211);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(169, 38);
             this.button1.TabIndex = 1;
@@ -198,6 +200,17 @@
             this.label2.Text = "Selamat Datang!";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(0, 142);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(169, 38);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Pengelolaan Promo";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // FormMO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -236,6 +249,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnIzinInstruktur;
         private System.Windows.Forms.Button btnPengelolaanKelas;
+        private System.Windows.Forms.Button button3;
 
     }
 }

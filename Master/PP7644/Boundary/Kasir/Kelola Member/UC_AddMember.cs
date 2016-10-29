@@ -105,9 +105,10 @@ namespace PP7644.Boundary.Kasir.Kelola_Member
             {
                 if (cekInput())
                 {
+                   // var isiID=getID();
+                    //var gender = getvalGender();
                     errorProvider1.Clear();
-                    var KM = new KelolaMember(txtNama.Text, lblIDMember.Text, getvalGender(Text),txtAlamat.Text, txtTelepon.Text,
-                        txtIDno.Text, Convert.ToDateTime(dateLahir.Value.ToString()));
+                   // var KM = new KelolaMember(txtNama.Text, gender.ToString, isiID.Text,txtAlamat.Text, txtTelepon.Text, txtIDno.Text, String.Format("{0:MM/dd/yyyy}", dateLahir.Text));
                     
                     this.Hide();
                     var myParent = (FormKelolaMember) Parent;
@@ -121,7 +122,7 @@ namespace PP7644.Boundary.Kasir.Kelola_Member
             clearInput();
             errorProvider1.Clear();
             this.Hide();
-            var myParent = (FormKelolaMember)this.Parent;
+            var myParent = (FormKelolaMember)ParentForm;
             myParent.Enable();
            // setEnableParent();
  
@@ -142,5 +143,23 @@ namespace PP7644.Boundary.Kasir.Kelola_Member
 
             return gender;
         }
+
+        /*public void getID()
+        {
+            string regist = System.DateTime.Today.ToString("dd/MM/yyyy");
+            string ttl_temp = dateLahir.Value.ToString("dd/MM/yyyy");
+
+            string yearregist = regist.Substring(8);
+            string monthregist = regist.Substring(3, 2);
+
+            string dateLahir = ttl_temp.Substring(0, 2);
+            string blnLahir = ttl_temp.Substring(3, 2);
+            string thnLahir = ttl_temp.Substring(6);
+
+            int sort = MC.getCountMember() + 1;
+            string tempSort = sort.ToString();
+
+            lblIDMember.Text = monthregist + yearregist;
+        }*/
     }
 }

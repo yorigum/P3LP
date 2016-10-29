@@ -6,34 +6,31 @@ namespace PP7644.Control
 {
     internal class MemberControl
     {
-        private readonly TBL_MEMBERTableAdapter TM = new TBL_MEMBERTableAdapter();
-        private readonly TBL_KELAS_SENAMTableAdapter TS = new TBL_KELAS_SENAMTableAdapter();
+        private readonly TBL_MEMBERTableAdapter TM=new TBL_MEMBERTableAdapter();
+        
 
         public DataTable showMember()
         {
-            return TM.GetData();
+           return TM.GetData();
         }
 
-        public DataTable searchMember(string Keyword)
-        {
-            return TM.GetDataBy(Keyword);
-        }
+       
 
         public void addMember(KelolaMember M)
         {
-           // TM.InsertMember(M.Nama, M.Alamat,M.Gender, M.IdMember, M.Telepon, M.Datelahir);
+            //TM.insertMember(M.IdMember, M.Nama, M.Datelahir, M.Gender, M.Alamat, M.Telepon, M.Noidentitas);
+        }
+
+        public void deleteMember(string id)
+        {
+            TM.DeleteMember(id);
         }
 
         //===========================
-
-        public DataTable getKelas()
+        public void getCountMember()
         {
-            return TS.GetData();
+            TM.getCountRowMember();
         }
 
-        public int getIDKelas(string kelas)
-        {
-            return TS.GetIdKelas(kelas).Value;
-        }
     }
 }

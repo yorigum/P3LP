@@ -99,7 +99,7 @@ namespace PP7644.Boundary
         {
             if (e.CloseReason == CloseReason.UserClosing)
             {
-                DialogResult result = MessageBox.Show("Apakah Anda yakin ingin menutup program??", "Keluar Program", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show("Apakah Anda yakin ingin menutup program?", "Keluar Program", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
                     Environment.Exit(0);

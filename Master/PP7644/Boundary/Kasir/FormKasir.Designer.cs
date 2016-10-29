@@ -42,6 +42,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.keterangan = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -51,11 +52,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bebas", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(392, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(267, 85);
+            this.label1.Size = new System.Drawing.Size(303, 73);
             this.label1.TabIndex = 1;
             this.label1.Text = "Fit N Fun";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -109,6 +110,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Aqua;
+            this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.btnKelolaTransaksi);
             this.panel3.Controls.Add(this.btnPresensiInstruktur);
             this.panel3.Controls.Add(this.btnPresensiMember);
@@ -137,7 +139,7 @@
             this.btnPresensiInstruktur.TabIndex = 2;
             this.btnPresensiInstruktur.Text = "Presensi Instruktur";
             this.btnPresensiInstruktur.UseVisualStyleBackColor = true;
-            this.btnPresensiInstruktur.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnPresensiInstruktur.Click += new System.EventHandler(this.btnPresensiInstruktur_Click);
             // 
             // btnPresensiMember
             // 
@@ -148,6 +150,7 @@
             this.btnPresensiMember.TabIndex = 1;
             this.btnPresensiMember.Text = "Presensi Member";
             this.btnPresensiMember.UseVisualStyleBackColor = true;
+            this.btnPresensiMember.Click += new System.EventHandler(this.btnPresensiMember_Click);
             // 
             // btnKelolaMember
             // 
@@ -198,6 +201,17 @@
             this.label2.Text = "Selamat Datang!";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(0, 184);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(169, 38);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Exit";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // FormKasir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,6 +251,7 @@
         private System.Windows.Forms.Label lblExit;
         private System.Windows.Forms.Button btnKelolaTransaksi;
         private System.Windows.Forms.Label keterangan;
+        private System.Windows.Forms.Button button2;
 
     }
 }

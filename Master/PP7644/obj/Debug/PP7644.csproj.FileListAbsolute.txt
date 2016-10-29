@@ -31,7 +31,10 @@ E:\KULIAH UAJY\OneDrive\SEMESTER 5\P3LP\Coding\PP7644\P3LP\Master\PP7644\obj\Deb
 E:\KULIAH UAJY\OneDrive\SEMESTER 5\P3LP\Coding\PP7644\P3LP\Master\PP7644\obj\Debug\PP7644.Boundary.FormMO.resources
 E:\KULIAH UAJY\OneDrive\SEMESTER 5\P3LP\Coding\PP7644\P3LP\Master\PP7644\obj\Debug\PP7644.Boundary.FormKelolaKelas.resources
 E:\KULIAH UAJY\OneDrive\SEMESTER 5\P3LP\Coding\PP7644\P3LP\Master\PP7644\obj\Debug\PP7644.Boundary.Manajer_Operasional.KelolaKelas.FormOperasi.resources
-E:\KULIAH UAJY\OneDrive\SEMESTER 5\P3LP\Coding\PP7644\P3LP\Master\PP7644\obj\Debug\PP7644.Boundary.FormKelolaPegawai.resources
+E:\KULIAH UAJY\OneDrive\SEMESTER 5\P3LP\Coding\PP7644\P3LP\Master\PP7644\obj\Debug\PP7644.Boundary.Manajer_Operasional.KelolaPegawai.FormKelolaPegawai2.resources
+E:\KULIAH UAJY\OneDrive\SEMESTER 5\P3LP\Coding\PP7644\P3LP\Master\PP7644\obj\Debug\PP7644.Boundary.Manajer_Operasional.KelolaPegawai.UCPegawai.resources
+E:\KULIAH UAJY\OneDrive\SEMESTER 5\P3LP\Coding\PP7644\P3LP\Master\PP7644\obj\Debug\PP7644.Boundary.Manajer_Operasional.KelolaPromo.FormPromo.resources
+E:\KULIAH UAJY\OneDrive\SEMESTER 5\P3LP\Coding\PP7644\P3LP\Master\PP7644\obj\Debug\PP7644.Boundary.Manajer_Operasional.KelolaPromo.UCPromo.resources
 E:\KULIAH UAJY\OneDrive\SEMESTER 5\P3LP\Coding\PP7644\P3LP\Master\PP7644\obj\Debug\PP7644.Boundary.LoginForm.resources
 E:\KULIAH UAJY\OneDrive\SEMESTER 5\P3LP\Coding\PP7644\P3LP\Master\PP7644\obj\Debug\PP7644.FitNFun.resources
 E:\KULIAH UAJY\OneDrive\SEMESTER 5\P3LP\Coding\PP7644\P3LP\Master\PP7644\obj\Debug\PP7644.Properties.Resources.resources
@@ -40,3 +43,31 @@ E:\KULIAH UAJY\OneDrive\SEMESTER 5\P3LP\Coding\PP7644\P3LP\Master\PP7644\obj\Deb
 E:\KULIAH UAJY\OneDrive\SEMESTER 5\P3LP\Coding\PP7644\P3LP\Master\PP7644\obj\Debug\PP7644.application
 E:\KULIAH UAJY\OneDrive\SEMESTER 5\P3LP\Coding\PP7644\P3LP\Master\PP7644\obj\Debug\PP7644.exe
 E:\KULIAH UAJY\OneDrive\SEMESTER 5\P3LP\Coding\PP7644\P3LP\Master\PP7644\obj\Debug\PP7644.pdb
+E:\KULIAH UAJY\OneDrive\SEMESTER 5\P3LP\Coding\PP7644\P3LP\Master\PP7644\obj\Debug\PP7644.csprojResolveAssemblyReference.cache
+F:\KULIAH\P3LP\Coding\P3LP\Master\PP7644\bin\Debug\PP7644.exe.config
+F:\KULIAH\P3LP\Coding\P3LP\Master\PP7644\bin\Debug\PP7644.exe.manifest
+F:\KULIAH\P3LP\Coding\P3LP\Master\PP7644\bin\Debug\PP7644.application
+F:\KULIAH\P3LP\Coding\P3LP\Master\PP7644\bin\Debug\PP7644.exe
+F:\KULIAH\P3LP\Coding\P3LP\Master\PP7644\bin\Debug\PP7644.pdb
+F:\KULIAH\P3LP\Coding\P3LP\Master\PP7644\obj\Debug\PP7644.Boundary.FormAdmin.resources
+F:\KULIAH\P3LP\Coding\P3LP\Master\PP7644\obj\Debug\PP7644.Boundary.FormKasir.resources
+F:\KULIAH\P3LP\Coding\P3LP\Master\PP7644\obj\Debug\PP7644.Boundary.FormKelolaMember.resources
+F:\KULIAH\P3LP\Coding\P3LP\Master\PP7644\obj\Debug\PP7644.Boundary.Kasir.Kelola_Member.UC_AddMember.resources
+F:\KULIAH\P3LP\Coding\P3LP\Master\PP7644\obj\Debug\PP7644.Boundary.FormMO.resources
+F:\KULIAH\P3LP\Coding\P3LP\Master\PP7644\obj\Debug\PP7644.Boundary.FormKelolaKelas.resources
+F:\KULIAH\P3LP\Coding\P3LP\Master\PP7644\obj\Debug\PP7644.Boundary.Manajer_Operasional.KelolaKelas.FormOperasi.resources
+F:\KULIAH\P3LP\Coding\P3LP\Master\PP7644\obj\Debug\PP7644.Boundary.Manajer_Operasional.KelolaPegawai.FormKelolaPegawai2.resources
+F:\KULIAH\P3LP\Coding\P3LP\Master\PP7644\obj\Debug\PP7644.Boundary.Manajer_Operasional.KelolaPegawai.UCPegawai.resources
+F:\KULIAH\P3LP\Coding\P3LP\Master\PP7644\obj\Debug\PP7644.Boundary.Manajer_Operasional.KelolaPromo.FormPromo.resources
+F:\KULIAH\P3LP\Coding\P3LP\Master\PP7644\obj\Debug\PP7644.Boundary.Manajer_Operasional.KelolaPromo.UCPromo.resources
+F:\KULIAH\P3LP\Coding\P3LP\Master\PP7644\obj\Debug\PP7644.Boundary.LoginForm.resources
+F:\KULIAH\P3LP\Coding\P3LP\Master\PP7644\obj\Debug\PP7644.FitNFun.resources
+F:\KULIAH\P3LP\Coding\P3LP\Master\PP7644\obj\Debug\PP7644.Properties.Resources.resources
+F:\KULIAH\P3LP\Coding\P3LP\Master\PP7644\obj\Debug\PP7644.csproj.GenerateResource.Cache
+F:\KULIAH\P3LP\Coding\P3LP\Master\PP7644\obj\Debug\PP7644.exe.manifest
+F:\KULIAH\P3LP\Coding\P3LP\Master\PP7644\obj\Debug\PP7644.application
+F:\KULIAH\P3LP\Coding\P3LP\Master\PP7644\obj\Debug\PP7644.exe
+F:\KULIAH\P3LP\Coding\P3LP\Master\PP7644\obj\Debug\PP7644.pdb
+F:\KULIAH\P3LP\Coding\P3LP\Master\PP7644\obj\Debug\PP7644.Boundary.Kasir.PresensiMember.PresensiMember.resources
+F:\KULIAH\P3LP\Coding\P3LP\Master\PP7644\obj\Debug\PP7644.csprojResolveAssemblyReference.cache
+F:\KULIAH\P3LP\Coding\P3LP\Master\PP7644\obj\Debug\PP7644.Boundary.Kasir.Presensi_Instruktur.PresensiInstruktur.resources

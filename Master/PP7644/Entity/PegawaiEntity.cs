@@ -1,18 +1,22 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 
 namespace PP7644.Entity
 {
     internal class PegawaiEntity
     {
-        public PegawaiEntity(string nama, string alamat, string gender, string jabatan, string contact,
-            DateTime tglLahir)
+        string nama, alamat, gender, jabatan, contact, noIdentitas,tglLahir;
+        int idJabatan;
+
+        public PegawaiEntity(string nama, string tglLahir, string gender, string alamat, string contact, string noIdentitas, int idJabatan)
         {
             Nama = nama;
             Alamat = alamat;
             Gender = gender;
-            Jabatan = jabatan;
             Contact = contact;
+            NoIdentitas = noIdentitas;
             TglLahir = tglLahir;
+            IDJabatan = idJabatan;
         }
 
         public string Nama { get; set; }
@@ -21,10 +25,12 @@ namespace PP7644.Entity
 
         public string Gender { get; set; }
 
-        public string Jabatan { get; set; }
-
         public string Contact { get; set; }
+        
+        public int IDJabatan { get; set; }
 
-        public DateTime TglLahir { get; set; }
+        public string TglLahir { get; set; }
+
+        public string NoIdentitas { get; set; }
     }
 }

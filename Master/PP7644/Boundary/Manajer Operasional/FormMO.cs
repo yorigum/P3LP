@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using PP7644.Boundary.Manajer_Operasional.KelolaPegawai;
+using PP7644.Boundary.Manajer_Operasional.KelolaPromo;
 
 namespace PP7644.Boundary
 {
@@ -37,7 +39,7 @@ namespace PP7644.Boundary
         private void btnKelolaPegawai_Click(object sender, EventArgs e)
         {
             Hide();
-            var kp = new FormKelolaPegawai();
+            var kp = new FormKelolaPegawai2();
             kp.ShowDialog();
             Close();
         }
@@ -46,6 +48,14 @@ namespace PP7644.Boundary
         {
             Hide();
             var kk = new FormKelolaKelas();
+            kk.ShowDialog();
+            Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Hide();
+            var kk = new FormPromo();
             kk.ShowDialog();
             Close();
         }

@@ -39,11 +39,6 @@ namespace PP7644.Boundary
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
-
-        private void pengelolaanDataPegawaiToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
         private void FormUtama_Load(object sender, EventArgs e)
         {
             setDataGridView(dataGridView1);
@@ -70,10 +65,6 @@ namespace PP7644.Boundary
         {
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-        }
-
         private void lblExit_Click(object sender, EventArgs e)
         {
             Hide();
@@ -86,6 +77,7 @@ namespace PP7644.Boundary
         {
             Hide();
             var fk = new FormKasir();
+            fk.setTextLabel("Pengguna: Kasir -" + lblUserLogin.Text);
             fk.ShowDialog();
             Close();
         }
@@ -93,6 +85,11 @@ namespace PP7644.Boundary
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             searchDataGridView(dataGridView1, txtSearch.Text);
+        }
+
+        private string getKolom(DataGridView dg, int i)
+        {
+            return dg[dg.Columns[i].Index, dg.CurrentRow.Index].Value.ToString();
         }
 
         private void disable()
@@ -106,7 +103,7 @@ namespace PP7644.Boundary
             btnSelesai.Enabled = false;
         }
 
-        private void enable()
+        public void Enable()
         {
             txtSearch.Enabled = true;
             dataGridView1.Enabled = true;
@@ -120,17 +117,42 @@ namespace PP7644.Boundary
             dataGridView1.Rows[0].Selected = true;
         }
 
-        private void btnTambah_Click(object sender, EventArgs e)
+        private void btnTambah_Click_1(object sender, EventArgs e)
         {
             uC_AddMember1.setFlag(1);
             uC_AddMember1.Visible = true;
             disable();
         }
 
-
-        internal void Enable()
+        private void btnHapus_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            if (txtID.Text == "")
+            {
+                MessageBox.Show("Silahkan pilih data yang hendak dihapus.");
+                dataGridView1.Focus();
+            }
+            else
+            {
+                var dr = MessageBox.Show("Apakah Anda yakin ingin menghapus data " + getKolom(dataGridView1, 1),
+                    "Pertanyaan", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
+                {
+                    MC.deleteMember(txtID.Text);
+                }
+                this.Enable();
+
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tvNama.Text = getKolom(dataGridView1, 1);
+            tvtglLahir.Text = getKolom(dataGridView1, 2);
+            tvGender.Text = getKolom(dataGridView1, 3);
+            tvAlamat.Text = getKolom(dataGridView1, 4);
+            tvNoTLP.Text = getKolom(dataGridView1, 5);
+            tvNoID.Text = getKolom(dataGridView1, 6);
+            txtID.Text = getKolom(dataGridView1, 0);
         }
     }
 }

@@ -1,67 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
-<xs:schema id="dsFitNFun" targetNamespace="http://tempuri.org/dsFitNFun.xsd"
-           xmlns:mstns="http://tempuri.org/dsFitNFun.xsd" xmlns="http://tempuri.org/dsFitNFun.xsd"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
-           xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified"
-           elementFormDefault="qualified">
+<xs:schema id="dsFitNFun" targetNamespace="http://tempuri.org/dsFitNFun.xsd" xmlns:mstns="http://tempuri.org/dsFitNFun.xsd" xmlns="http://tempuri.org/dsFitNFun.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter"
-                  Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema"
-                  xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PP_L_7644ConnectionString"
-                      ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly"
-                      Name="PP_L_7644ConnectionString (Settings)" ParameterPrefix="@"
-                      PropertyReference="ApplicationSettings.PP7644.Properties.Settings.GlobalReference.Default.PP_L_7644ConnectionString"
-                      Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PP_L_7644ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PP_L_7644ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PP7644.Properties.Settings.GlobalReference.Default.PP_L_7644ConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component"
-                        DataAccessorModifier="AutoLayout, AnsiClass, Class, Public"
-                        DataAccessorName="TBL_PENGGUNATableAdapter"
-                        GeneratorDataComponentClassName="TBL_PENGGUNATableAdapter" Name="TBL_PENGGUNA"
-                        UserDataComponentName="TBL_PENGGUNATableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TBL_PENGGUNATableAdapter" GeneratorDataComponentClassName="TBL_PENGGUNATableAdapter" Name="TBL_PENGGUNA" UserDataComponentName="TBL_PENGGUNATableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="PP_L_7644ConnectionString (Settings)" DbObjectName="PP_L_7644.dbo.TBL_PENGGUNA"
-                        DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both"
-                        GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill"
-                        GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset"
-                        ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-                        UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="PP_L_7644ConnectionString (Settings)" DbObjectName="PP_L_7644.dbo.TBL_PENGGUNA" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[TBL_PENGGUNA] WHERE (([id_pengguna] = @Original_id_pengguna) AND ((@IsNull_nama_pengguna = 1 AND [nama_pengguna] IS NULL) OR ([nama_pengguna] = @Original_nama_pengguna)) AND ((@IsNull_password = 1 AND [password] IS NULL) OR ([password] = @Original_password)) AND ((@IsNull_id_role = 1 AND [id_role] IS NULL) OR ([id_role] = @Original_id_role)))</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@Original_id_pengguna" Precision="0"
-                                 ProviderType="Int" Scale="0" Size="0" SourceColumn="id_pengguna"
-                                 SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@IsNull_nama_pengguna" Precision="0"
-                                 ProviderType="Int" Scale="0" Size="0" SourceColumn="nama_pengguna"
-                                 SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString"
-                                 Direction="Input" ParameterName="@Original_nama_pengguna" Precision="0"
-                                 ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_pengguna"
-                                 SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@IsNull_password" Precision="0" ProviderType="Int"
-                                 Scale="0" Size="0" SourceColumn="password" SourceColumnNullMapping="true"
-                                 SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString"
-                                 Direction="Input" ParameterName="@Original_password" Precision="0"
-                                 ProviderType="VarChar" Scale="0" Size="0" SourceColumn="password"
-                                 SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@IsNull_id_role" Precision="0" ProviderType="Int"
-                                 Scale="0" Size="0" SourceColumn="id_role" SourceColumnNullMapping="true"
-                                 SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@Original_id_role" Precision="0" ProviderType="Int"
-                                 Scale="0" Size="0" SourceColumn="id_role" SourceColumnNullMapping="false"
-                                 SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id_pengguna" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_pengguna" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_nama_pengguna" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nama_pengguna" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_nama_pengguna" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_pengguna" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_password" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="password" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_password" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="password" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_id_role" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_role" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id_role" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_role" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
@@ -72,22 +31,10 @@
                       SELECT id_pengguna, nama_pengguna, password, id_role FROM TBL_PENGGUNA WHERE (id_pengguna = @id_pengguna)
                     </CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@id_pengguna" Precision="0" ProviderType="Int"
-                                 Scale="0" Size="0" SourceColumn="id_pengguna" SourceColumnNullMapping="false"
-                                 SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString"
-                                 Direction="Input" ParameterName="@nama_pengguna" Precision="0" ProviderType="VarChar"
-                                 Scale="0" Size="0" SourceColumn="nama_pengguna" SourceColumnNullMapping="false"
-                                 SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString"
-                                 Direction="Input" ParameterName="@password" Precision="0" ProviderType="VarChar"
-                                 Scale="0" Size="0" SourceColumn="password" SourceColumnNullMapping="false"
-                                 SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@id_role" Precision="0" ProviderType="Int" Scale="0"
-                                 Size="0" SourceColumn="id_role" SourceColumnNullMapping="false"
-                                 SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@id_pengguna" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_pengguna" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@nama_pengguna" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_pengguna" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@password" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="password" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@id_role" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_role" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
@@ -104,50 +51,17 @@
                       SELECT id_pengguna, nama_pengguna, password, id_role FROM TBL_PENGGUNA WHERE (id_pengguna = @id_pengguna)
                     </CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@id_pengguna" Precision="0" ProviderType="Int"
-                                 Scale="0" Size="0" SourceColumn="id_pengguna" SourceColumnNullMapping="false"
-                                 SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString"
-                                 Direction="Input" ParameterName="@nama_pengguna" Precision="0" ProviderType="VarChar"
-                                 Scale="0" Size="0" SourceColumn="nama_pengguna" SourceColumnNullMapping="false"
-                                 SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString"
-                                 Direction="Input" ParameterName="@password" Precision="0" ProviderType="VarChar"
-                                 Scale="0" Size="0" SourceColumn="password" SourceColumnNullMapping="false"
-                                 SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@id_role" Precision="0" ProviderType="Int" Scale="0"
-                                 Size="0" SourceColumn="id_role" SourceColumnNullMapping="false"
-                                 SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@Original_id_pengguna" Precision="0"
-                                 ProviderType="Int" Scale="0" Size="0" SourceColumn="id_pengguna"
-                                 SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@IsNull_nama_pengguna" Precision="0"
-                                 ProviderType="Int" Scale="0" Size="0" SourceColumn="nama_pengguna"
-                                 SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString"
-                                 Direction="Input" ParameterName="@Original_nama_pengguna" Precision="0"
-                                 ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_pengguna"
-                                 SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@IsNull_password" Precision="0" ProviderType="Int"
-                                 Scale="0" Size="0" SourceColumn="password" SourceColumnNullMapping="true"
-                                 SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString"
-                                 Direction="Input" ParameterName="@Original_password" Precision="0"
-                                 ProviderType="VarChar" Scale="0" Size="0" SourceColumn="password"
-                                 SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@IsNull_id_role" Precision="0" ProviderType="Int"
-                                 Scale="0" Size="0" SourceColumn="id_role" SourceColumnNullMapping="true"
-                                 SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@Original_id_role" Precision="0" ProviderType="Int"
-                                 Scale="0" Size="0" SourceColumn="id_role" SourceColumnNullMapping="false"
-                                 SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@id_pengguna" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_pengguna" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@nama_pengguna" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_pengguna" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@password" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="password" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@id_role" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_role" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id_pengguna" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_pengguna" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_nama_pengguna" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nama_pengguna" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_nama_pengguna" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_pengguna" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_password" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="password" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_password" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="password" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_id_role" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_role" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id_role" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_role" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -160,11 +74,7 @@
               <Mapping SourceColumn="id_role" DataSetColumn="id_role" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="PP_L_7644ConnectionString (Settings)" DbObjectName="PP_L_7644.dbo.TBL_PENGGUNA"
-                        DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetRole"
-                        Modifier="Public" Name="GetRole" QueryType="Scalar"
-                        ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-                        UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="GetRole">
+              <DbSource ConnectionRef="PP_L_7644ConnectionString (Settings)" DbObjectName="PP_L_7644.dbo.TBL_PENGGUNA" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetRole" Modifier="Public" Name="GetRole" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetRole">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>
@@ -173,25 +83,13 @@
                       WHERE        (nama_pengguna = @nama) AND (password = @pass)
                     </CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="nama" ColumnName="nama_pengguna"
-                                 DataSourceName="PP_L_7644.dbo.TBL_PENGGUNA" DataTypeServer="varchar(50)"
-                                 DbType="AnsiString" Direction="Input" ParameterName="@nama" Precision="0"
-                                 ProviderType="VarChar" Scale="0" Size="50" SourceColumn="nama_pengguna"
-                                 SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="pass" ColumnName="password"
-                                 DataSourceName="PP_L_7644.dbo.TBL_PENGGUNA" DataTypeServer="varchar(50)"
-                                 DbType="AnsiString" Direction="Input" ParameterName="@pass" Precision="0"
-                                 ProviderType="VarChar" Scale="0" Size="50" SourceColumn="password"
-                                 SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="nama" ColumnName="nama_pengguna" DataSourceName="PP_L_7644.dbo.TBL_PENGGUNA" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@nama" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="nama_pengguna" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="pass" ColumnName="password" DataSourceName="PP_L_7644.dbo.TBL_PENGGUNA" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@pass" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="password" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="PP_L_7644ConnectionString (Settings)" DbObjectName="PP_L_7644.dbo.TBL_PENGGUNA"
-                        DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetUser"
-                        Modifier="Public" Name="GetUser" QueryType="Scalar"
-                        ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-                        UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetUser">
+              <DbSource ConnectionRef="PP_L_7644ConnectionString (Settings)" DbObjectName="PP_L_7644.dbo.TBL_PENGGUNA" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetUser" Modifier="Public" Name="GetUser" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="GetUser">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>
@@ -200,49 +98,24 @@
                       WHERE        (nama_pengguna = @user) AND (password = @pass)
                     </CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="user" ColumnName="nama_pengguna"
-                                 DataSourceName="PP_L_7644.dbo.TBL_PENGGUNA" DataTypeServer="varchar(50)"
-                                 DbType="AnsiString" Direction="Input" ParameterName="@user" Precision="0"
-                                 ProviderType="VarChar" Scale="0" Size="50" SourceColumn="nama_pengguna"
-                                 SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="pass" ColumnName="password"
-                                 DataSourceName="PP_L_7644.dbo.TBL_PENGGUNA" DataTypeServer="varchar(50)"
-                                 DbType="AnsiString" Direction="Input" ParameterName="@pass" Precision="0"
-                                 ProviderType="VarChar" Scale="0" Size="50" SourceColumn="password"
-                                 SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="user" ColumnName="nama_pengguna" DataSourceName="PP_L_7644.dbo.TBL_PENGGUNA" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@user" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="nama_pengguna" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="pass" ColumnName="password" DataSourceName="PP_L_7644.dbo.TBL_PENGGUNA" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@pass" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="password" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </Sources>
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component"
-                        DataAccessorModifier="AutoLayout, AnsiClass, Class, Public"
-                        DataAccessorName="TBL_ROLETableAdapter" GeneratorDataComponentClassName="TBL_ROLETableAdapter"
-                        Name="TBL_ROLE" UserDataComponentName="TBL_ROLETableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TBL_ROLETableAdapter" GeneratorDataComponentClassName="TBL_ROLETableAdapter" Name="TBL_ROLE" UserDataComponentName="TBL_ROLETableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="PP_L_7644ConnectionString (Settings)" DbObjectName="PP_L_7644.dbo.TBL_ROLE"
-                        DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both"
-                        GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill"
-                        GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset"
-                        ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-                        UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="PP_L_7644ConnectionString (Settings)" DbObjectName="PP_L_7644.dbo.TBL_ROLE" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[TBL_ROLE] WHERE (([id_role] = @Original_id_role) AND ((@IsNull_nama_role = 1 AND [nama_role] IS NULL) OR ([nama_role] = @Original_nama_role)))</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@Original_id_role" Precision="0" ProviderType="Int"
-                                 Scale="0" Size="0" SourceColumn="id_role" SourceColumnNullMapping="false"
-                                 SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@IsNull_nama_role" Precision="0" ProviderType="Int"
-                                 Scale="0" Size="0" SourceColumn="nama_role" SourceColumnNullMapping="true"
-                                 SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString"
-                                 Direction="Input" ParameterName="@Original_nama_role" Precision="0"
-                                 ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_role"
-                                 SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id_role" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_role" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_nama_role" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nama_role" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_nama_role" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_role" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
@@ -253,14 +126,8 @@
                       SELECT id_role, nama_role FROM TBL_ROLE WHERE (id_role = @id_role)
                     </CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@id_role" Precision="0" ProviderType="Int" Scale="0"
-                                 Size="0" SourceColumn="id_role" SourceColumnNullMapping="false"
-                                 SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString"
-                                 Direction="Input" ParameterName="@nama_role" Precision="0" ProviderType="VarChar"
-                                 Scale="0" Size="0" SourceColumn="nama_role" SourceColumnNullMapping="false"
-                                 SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@id_role" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_role" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@nama_role" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_role" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
@@ -277,26 +144,11 @@
                       SELECT id_role, nama_role FROM TBL_ROLE WHERE (id_role = @id_role)
                     </CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@id_role" Precision="0" ProviderType="Int" Scale="0"
-                                 Size="0" SourceColumn="id_role" SourceColumnNullMapping="false"
-                                 SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString"
-                                 Direction="Input" ParameterName="@nama_role" Precision="0" ProviderType="VarChar"
-                                 Scale="0" Size="0" SourceColumn="nama_role" SourceColumnNullMapping="false"
-                                 SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@Original_id_role" Precision="0" ProviderType="Int"
-                                 Scale="0" Size="0" SourceColumn="id_role" SourceColumnNullMapping="false"
-                                 SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32"
-                                 Direction="Input" ParameterName="@IsNull_nama_role" Precision="0" ProviderType="Int"
-                                 Scale="0" Size="0" SourceColumn="nama_role" SourceColumnNullMapping="true"
-                                 SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString"
-                                 Direction="Input" ParameterName="@Original_nama_role" Precision="0"
-                                 ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_role"
-                                 SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@id_role" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_role" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@nama_role" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_role" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id_role" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_role" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_nama_role" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nama_role" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_nama_role" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_role" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -308,77 +160,96 @@
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TBL_PRESENSI_MEMBERTableAdapter" GeneratorDataComponentClassName="TBL_PRESENSI_MEMBERTableAdapter" Name="TBL_PRESENSI_MEMBER" UserDataComponentName="TBL_PRESENSI_MEMBERTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PP_L_7644ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        TBL_PRESENSI_MEMBER.id_presensi, TBL_PRESENSI_MEMBER.id_jadwal, TBL_PRESENSI_MEMBER.tanggal, TBL_MEMBER.nama_member
+FROM            TBL_PRESENSI_MEMBER INNER JOIN
+                         TBL_MEMBER ON TBL_PRESENSI_MEMBER.tanggal = TBL_MEMBER.id_member</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_presensi" DataSetColumn="id_presensi" />
+              <Mapping SourceColumn="id_jadwal" DataSetColumn="id_jadwal" />
+              <Mapping SourceColumn="tanggal" DataSetColumn="tanggal" />
+              <Mapping SourceColumn="nama_member" DataSetColumn="nama_member" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="dsFitNFun" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"
-              msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsFitNFun"
-              msprop:Generator_UserDSName="dsFitNFun">
+  <xs:element name="dsFitNFun" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsFitNFun" msprop:Generator_UserDSName="dsFitNFun">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="TBL_PENGGUNA" msprop:Generator_TableClassName="TBL_PENGGUNADataTable"
-                    msprop:Generator_TableVarName="tableTBL_PENGGUNA" msprop:Generator_TablePropName="TBL_PENGGUNA"
-                    msprop:Generator_RowDeletingName="TBL_PENGGUNARowDeleting"
-                    msprop:Generator_RowChangingName="TBL_PENGGUNARowChanging"
-                    msprop:Generator_RowEvHandlerName="TBL_PENGGUNARowChangeEventHandler"
-                    msprop:Generator_RowDeletedName="TBL_PENGGUNARowDeleted"
-                    msprop:Generator_UserTableName="TBL_PENGGUNA"
-                    msprop:Generator_RowChangedName="TBL_PENGGUNARowChanged"
-                    msprop:Generator_RowEvArgName="TBL_PENGGUNARowChangeEvent"
-                    msprop:Generator_RowClassName="TBL_PENGGUNARow">
+        <xs:element name="TBL_PENGGUNA" msprop:Generator_TableClassName="TBL_PENGGUNADataTable" msprop:Generator_TableVarName="tableTBL_PENGGUNA" msprop:Generator_RowChangedName="TBL_PENGGUNARowChanged" msprop:Generator_TablePropName="TBL_PENGGUNA" msprop:Generator_RowDeletingName="TBL_PENGGUNARowDeleting" msprop:Generator_RowChangingName="TBL_PENGGUNARowChanging" msprop:Generator_RowEvHandlerName="TBL_PENGGUNARowChangeEventHandler" msprop:Generator_RowDeletedName="TBL_PENGGUNARowDeleted" msprop:Generator_RowClassName="TBL_PENGGUNARow" msprop:Generator_UserTableName="TBL_PENGGUNA" msprop:Generator_RowEvArgName="TBL_PENGGUNARowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id_pengguna" msprop:Generator_ColumnVarNameInTable="columnid_pengguna"
-                          msprop:Generator_ColumnPropNameInRow="id_pengguna"
-                          msprop:Generator_ColumnPropNameInTable="id_penggunaColumn"
-                          msprop:Generator_UserColumnName="id_pengguna" type="xs:int" />
-              <xs:element name="nama_pengguna" msprop:Generator_ColumnVarNameInTable="columnnama_pengguna"
-                          msprop:Generator_ColumnPropNameInRow="nama_pengguna"
-                          msprop:Generator_ColumnPropNameInTable="nama_penggunaColumn"
-                          msprop:Generator_UserColumnName="nama_pengguna" minOccurs="0">
+              <xs:element name="id_pengguna" msprop:Generator_ColumnVarNameInTable="columnid_pengguna" msprop:Generator_ColumnPropNameInRow="id_pengguna" msprop:Generator_ColumnPropNameInTable="id_penggunaColumn" msprop:Generator_UserColumnName="id_pengguna" type="xs:int" />
+              <xs:element name="nama_pengguna" msprop:Generator_ColumnVarNameInTable="columnnama_pengguna" msprop:Generator_ColumnPropNameInRow="nama_pengguna" msprop:Generator_ColumnPropNameInTable="nama_penggunaColumn" msprop:Generator_UserColumnName="nama_pengguna" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="password" msprop:Generator_ColumnVarNameInTable="columnpassword"
-                          msprop:Generator_ColumnPropNameInRow="password"
-                          msprop:Generator_ColumnPropNameInTable="passwordColumn"
-                          msprop:Generator_UserColumnName="password" minOccurs="0">
+              <xs:element name="password" msprop:Generator_ColumnVarNameInTable="columnpassword" msprop:Generator_ColumnPropNameInRow="password" msprop:Generator_ColumnPropNameInTable="passwordColumn" msprop:Generator_UserColumnName="password" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="id_role" msprop:Generator_ColumnVarNameInTable="columnid_role"
-                          msprop:Generator_ColumnPropNameInRow="id_role"
-                          msprop:Generator_ColumnPropNameInTable="id_roleColumn"
-                          msprop:Generator_UserColumnName="id_role" type="xs:int" minOccurs="0" />
+              <xs:element name="id_role" msprop:Generator_ColumnVarNameInTable="columnid_role" msprop:Generator_ColumnPropNameInRow="id_role" msprop:Generator_ColumnPropNameInTable="id_roleColumn" msprop:Generator_UserColumnName="id_role" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TBL_ROLE" msprop:Generator_TableClassName="TBL_ROLEDataTable"
-                    msprop:Generator_TableVarName="tableTBL_ROLE" msprop:Generator_TablePropName="TBL_ROLE"
-                    msprop:Generator_RowDeletingName="TBL_ROLERowDeleting"
-                    msprop:Generator_RowChangingName="TBL_ROLERowChanging"
-                    msprop:Generator_RowEvHandlerName="TBL_ROLERowChangeEventHandler"
-                    msprop:Generator_RowDeletedName="TBL_ROLERowDeleted" msprop:Generator_UserTableName="TBL_ROLE"
-                    msprop:Generator_RowChangedName="TBL_ROLERowChanged"
-                    msprop:Generator_RowEvArgName="TBL_ROLERowChangeEvent" msprop:Generator_RowClassName="TBL_ROLERow">
+        <xs:element name="TBL_ROLE" msprop:Generator_TableClassName="TBL_ROLEDataTable" msprop:Generator_TableVarName="tableTBL_ROLE" msprop:Generator_RowChangedName="TBL_ROLERowChanged" msprop:Generator_TablePropName="TBL_ROLE" msprop:Generator_RowDeletingName="TBL_ROLERowDeleting" msprop:Generator_RowChangingName="TBL_ROLERowChanging" msprop:Generator_RowEvHandlerName="TBL_ROLERowChangeEventHandler" msprop:Generator_RowDeletedName="TBL_ROLERowDeleted" msprop:Generator_RowClassName="TBL_ROLERow" msprop:Generator_UserTableName="TBL_ROLE" msprop:Generator_RowEvArgName="TBL_ROLERowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id_role" msprop:Generator_ColumnVarNameInTable="columnid_role"
-                          msprop:Generator_ColumnPropNameInRow="id_role"
-                          msprop:Generator_ColumnPropNameInTable="id_roleColumn"
-                          msprop:Generator_UserColumnName="id_role" type="xs:int" />
-              <xs:element name="nama_role" msprop:Generator_ColumnVarNameInTable="columnnama_role"
-                          msprop:Generator_ColumnPropNameInRow="nama_role"
-                          msprop:Generator_ColumnPropNameInTable="nama_roleColumn"
-                          msprop:Generator_UserColumnName="nama_role" minOccurs="0">
+              <xs:element name="id_role" msprop:Generator_ColumnVarNameInTable="columnid_role" msprop:Generator_ColumnPropNameInRow="id_role" msprop:Generator_ColumnPropNameInTable="id_roleColumn" msprop:Generator_UserColumnName="id_role" type="xs:int" />
+              <xs:element name="nama_role" msprop:Generator_ColumnVarNameInTable="columnnama_role" msprop:Generator_ColumnPropNameInRow="nama_role" msprop:Generator_ColumnPropNameInTable="nama_roleColumn" msprop:Generator_UserColumnName="nama_role" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TBL_PRESENSI_MEMBER" msprop:Generator_TableClassName="TBL_PRESENSI_MEMBERDataTable" msprop:Generator_TableVarName="tableTBL_PRESENSI_MEMBER" msprop:Generator_TablePropName="TBL_PRESENSI_MEMBER" msprop:Generator_RowDeletingName="TBL_PRESENSI_MEMBERRowDeleting" msprop:Generator_RowChangingName="TBL_PRESENSI_MEMBERRowChanging" msprop:Generator_RowEvHandlerName="TBL_PRESENSI_MEMBERRowChangeEventHandler" msprop:Generator_RowDeletedName="TBL_PRESENSI_MEMBERRowDeleted" msprop:Generator_UserTableName="TBL_PRESENSI_MEMBER" msprop:Generator_RowChangedName="TBL_PRESENSI_MEMBERRowChanged" msprop:Generator_RowEvArgName="TBL_PRESENSI_MEMBERRowChangeEvent" msprop:Generator_RowClassName="TBL_PRESENSI_MEMBERRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_presensi" msprop:Generator_ColumnVarNameInTable="columnid_presensi" msprop:Generator_ColumnPropNameInRow="id_presensi" msprop:Generator_ColumnPropNameInTable="id_presensiColumn" msprop:Generator_UserColumnName="id_presensi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_jadwal" msprop:Generator_ColumnVarNameInTable="columnid_jadwal" msprop:Generator_ColumnPropNameInRow="id_jadwal" msprop:Generator_ColumnPropNameInTable="id_jadwalColumn" msprop:Generator_UserColumnName="id_jadwal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tanggal" msprop:Generator_ColumnVarNameInTable="columntanggal" msprop:Generator_ColumnPropNameInRow="tanggal" msprop:Generator_ColumnPropNameInTable="tanggalColumn" msprop:Generator_UserColumnName="tanggal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nama_member" msprop:Generator_ColumnVarNameInTable="columnnama_member" msprop:Generator_ColumnPropNameInRow="nama_member" msprop:Generator_ColumnPropNameInTable="nama_memberColumn" msprop:Generator_UserColumnName="nama_member" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -398,16 +269,14 @@
       <xs:selector xpath=".//mstns:TBL_ROLE" />
       <xs:field xpath="mstns:id_role" />
     </xs:unique>
+    <xs:unique name="TBL_PRESENSI_MEMBER_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TBL_PRESENSI_MEMBER" />
+      <xs:field xpath="mstns:id_presensi" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_TBL_PENGGUNA_TBL_ROLE" msdata:parent="TBL_ROLE" msdata:child="TBL_PENGGUNA"
-                           msdata:parentkey="id_role" msdata:childkey="id_role"
-                           msprop:Generator_UserChildTable="TBL_PENGGUNA"
-                           msprop:Generator_ChildPropName="GetTBL_PENGGUNARows"
-                           msprop:Generator_UserRelationName="FK_TBL_PENGGUNA_TBL_ROLE"
-                           msprop:Generator_RelationVarName="relationFK_TBL_PENGGUNA_TBL_ROLE"
-                           msprop:Generator_UserParentTable="TBL_ROLE" msprop:Generator_ParentPropName="TBL_ROLERow" />
+      <msdata:Relationship name="FK_TBL_PENGGUNA_TBL_ROLE" msdata:parent="TBL_ROLE" msdata:child="TBL_PENGGUNA" msdata:parentkey="id_role" msdata:childkey="id_role" msprop:Generator_UserChildTable="TBL_PENGGUNA" msprop:Generator_ChildPropName="GetTBL_PENGGUNARows" msprop:Generator_UserRelationName="FK_TBL_PENGGUNA_TBL_ROLE" msprop:Generator_ParentPropName="TBL_ROLERow" msprop:Generator_RelationVarName="relationFK_TBL_PENGGUNA_TBL_ROLE" msprop:Generator_UserParentTable="TBL_ROLE" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

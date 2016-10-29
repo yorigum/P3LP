@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
+using PP7644.Boundary.Kasir;
+using PP7644.Boundary.Kasir.PresensiMember;
+using PP7644.Boundary.Kasir.Presensi_Instruktur;
 
 namespace PP7644.Boundary
 {
@@ -27,10 +30,6 @@ namespace PP7644.Boundary
         {
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-        }
-
         private void lblExit_Click(object sender, EventArgs e)
         {
             Hide();
@@ -47,5 +46,34 @@ namespace PP7644.Boundary
             fkl.ShowDialog();
             Close();
         }
+
+        private void btnPresensiMember_Click(object sender, EventArgs e)
+        {
+            Hide();
+            var fkl = new PresensiMember();
+            fkl.setTextLabel("Pengguna: Kasir -" + lblUserLogin.Text);
+            fkl.ShowDialog();
+            Close();
+        }
+
+        private void btnPresensiInstruktur_Click(object sender, EventArgs e)
+        {
+            Hide();
+            var fkl = new PresensiInstruktur();
+            fkl.setTextLabel("Pengguna: Kasir -" + lblUserLogin.Text);
+            fkl.ShowDialog();
+            Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Hide();
+            var fkl = new FormKasir();
+            fkl.setTextLabel("Pengguna: Kasir -" + lblUserLogin.Text);
+            fkl.ShowDialog();
+            Close();
+        }
+
+
     }
 }

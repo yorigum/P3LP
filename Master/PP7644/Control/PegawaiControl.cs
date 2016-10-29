@@ -6,7 +6,18 @@ namespace PP7644.Entity
 {
     internal class PegawaiControl
     {
-        private readonly TBL_PEGAWAITableAdapter TP = new TBL_PEGAWAITableAdapter();
+        private TBL_PEGAWAITableAdapter TP = new TBL_PEGAWAITableAdapter();
+        private TBL_JABATANTableAdapter TJ=new TBL_JABATANTableAdapter();
+
+        public DataTable getJabatan()
+        {
+            return TJ.GetData();
+        }
+
+        public int getJabatan(string jabatan)
+        {
+            return (int) TJ.getJabatan(jabatan);
+        }
 
         public DataTable showPegawai()
         {
@@ -28,16 +39,20 @@ namespace PP7644.Entity
         }
         public DataTable searchPegawai(string keyword)
         {
-            DataTable DT = null;
-            try
-            {
-                DT = TP.searchPegawai(keyword) as DataTable;
-            }
-            catch (Exception ex)
-            {
-              //DT.ShowMessage(ex.ToString(), "Kesalahan");
-            }
-            return DT;
+                return TP.searchPegawai(keyword);
+
+        }
+
+        public void addPegawai(PegawaiEntity P)
+        {
+
+            TP.InsertPegawai(P.Nama, P.TglLahir, P.Gender, P.Alamat, P.Contact,P.IDJabatan, P.NoIdentitas);
+                //@nama,@tgl_lahir,@gender,@alamat,@noHP,@idJabatan,@noIdentitas)
+        }
+
+        public void deletePegawai(int idPegawai)
+        {
+            TP.DeletePegawai(idPegawai);
         }
     }
 }

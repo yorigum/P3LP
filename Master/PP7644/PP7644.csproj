@@ -97,6 +97,18 @@
     <Compile Include="Boundary\Kasir\Kelola Member\UC_AddMember.Designer.cs">
       <DependentUpon>UC_AddMember.cs</DependentUpon>
     </Compile>
+    <Compile Include="Boundary\Kasir\Presensi Instruktur\PresensiInstruktur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boundary\Kasir\Presensi Instruktur\PresensiInstruktur.Designer.cs">
+      <DependentUpon>PresensiInstruktur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boundary\Kasir\PresensiMember\PresensiMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boundary\Kasir\PresensiMember\PresensiMember.Designer.cs">
+      <DependentUpon>PresensiMember.cs</DependentUpon>
+    </Compile>
     <Compile Include="Boundary\Manajer Operasional\FormMO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,11 +127,29 @@
     <Compile Include="Boundary\Manajer Operasional\KelolaKelas\FormOperasi.Designer.cs">
       <DependentUpon>FormOperasi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Boundary\Manajer Operasional\KelolaPegawai\FormKelolaPegawai.cs">
+    <Compile Include="Boundary\Manajer Operasional\KelolaPegawai\FormKelolaPegawai2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Boundary\Manajer Operasional\KelolaPegawai\FormKelolaPegawai.Designer.cs">
-      <DependentUpon>FormKelolaPegawai.cs</DependentUpon>
+    <Compile Include="Boundary\Manajer Operasional\KelolaPegawai\FormKelolaPegawai2.Designer.cs">
+      <DependentUpon>FormKelolaPegawai2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boundary\Manajer Operasional\KelolaPegawai\UCPegawai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Boundary\Manajer Operasional\KelolaPegawai\UCPegawai.Designer.cs">
+      <DependentUpon>UCPegawai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boundary\Manajer Operasional\KelolaPromo\FormPromo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boundary\Manajer Operasional\KelolaPromo\FormPromo.Designer.cs">
+      <DependentUpon>FormPromo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boundary\Manajer Operasional\KelolaPromo\UCPromo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Boundary\Manajer Operasional\KelolaPromo\UCPromo.Designer.cs">
+      <DependentUpon>UCPromo.cs</DependentUpon>
     </Compile>
     <Compile Include="Boundary\More\LoginForm.cs">
       <SubType>Form</SubType>
@@ -131,11 +161,8 @@
     <Compile Include="Control\LoginControl.cs" />
     <Compile Include="Control\MemberControl.cs" />
     <Compile Include="Control\MenuAdminControl.cs" />
-    <Compile Include="Entity\DataSetKelas.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetKelas.xsd</DependentUpon>
-    </Compile>
+    <Compile Include="Control\PresensiMemberControl.cs" />
+    <Compile Include="Control\PromoControl.cs" />
     <Compile Include="Entity\DataSetMember.cs">
       <DependentUpon>DataSetMember.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -144,6 +171,20 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetMember.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\DataSetPromo.cs">
+      <DependentUpon>DataSetPromo.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Entity\DataSetPromo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPromo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\DataSetKelas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetKelas.xsd</DependentUpon>
     </Compile>
     <Compile Include="Entity\DataSetPegawai.cs">
       <DependentUpon>DataSetPegawai.xsd</DependentUpon>
@@ -173,6 +214,8 @@
     <Compile Include="Entity\MenuAdmin.cs" />
     <Compile Include="Control\PegawaiControl.cs" />
     <Compile Include="Entity\PegawaiEntity.cs" />
+    <Compile Include="Entity\PresensiMemberEntity.cs" />
+    <Compile Include="Entity\PromoEntity.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +241,12 @@
     <EmbeddedResource Include="Boundary\Kasir\Kelola Member\UC_AddMember.resx">
       <DependentUpon>UC_AddMember.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Boundary\Kasir\Presensi Instruktur\PresensiInstruktur.resx">
+      <DependentUpon>PresensiInstruktur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boundary\Kasir\PresensiMember\PresensiMember.resx">
+      <DependentUpon>PresensiMember.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Boundary\Manajer Operasional\FormMO.resx">
       <DependentUpon>FormMO.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,8 +256,17 @@
     <EmbeddedResource Include="Boundary\Manajer Operasional\KelolaKelas\FormOperasi.resx">
       <DependentUpon>FormOperasi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Boundary\Manajer Operasional\KelolaPegawai\FormKelolaPegawai.resx">
-      <DependentUpon>FormKelolaPegawai.cs</DependentUpon>
+    <EmbeddedResource Include="Boundary\Manajer Operasional\KelolaPegawai\FormKelolaPegawai2.resx">
+      <DependentUpon>FormKelolaPegawai2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boundary\Manajer Operasional\KelolaPegawai\UCPegawai.resx">
+      <DependentUpon>UCPegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boundary\Manajer Operasional\KelolaPromo\FormPromo.resx">
+      <DependentUpon>FormPromo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boundary\Manajer Operasional\KelolaPromo\UCPromo.resx">
+      <DependentUpon>UCPromo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Boundary\More\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -225,17 +283,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Entity\DataSetKelas.xsc">
-      <DependentUpon>DataSetKelas.xsd</DependentUpon>
-    </None>
-    <None Include="Entity\DataSetKelas.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetKelas.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Entity\DataSetKelas.xss">
-      <DependentUpon>DataSetKelas.xsd</DependentUpon>
-    </None>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Entity\DataSetMember.xsc">
       <DependentUpon>DataSetMember.xsd</DependentUpon>
     </None>
@@ -246,6 +294,28 @@
     </None>
     <None Include="Entity\DataSetMember.xss">
       <DependentUpon>DataSetMember.xsd</DependentUpon>
+    </None>
+    <None Include="Entity\DataSetPromo.xsc">
+      <DependentUpon>DataSetPromo.xsd</DependentUpon>
+    </None>
+    <None Include="Entity\DataSetPromo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPromo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Entity\DataSetPromo.xss">
+      <DependentUpon>DataSetPromo.xsd</DependentUpon>
+    </None>
+    <None Include="Entity\DataSetKelas.xsc">
+      <DependentUpon>DataSetKelas.xsd</DependentUpon>
+    </None>
+    <None Include="Entity\DataSetKelas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetKelas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Entity\DataSetKelas.xss">
+      <DependentUpon>DataSetKelas.xsd</DependentUpon>
     </None>
     <None Include="Entity\DataSetPegawai.xsc">
       <DependentUpon>DataSetPegawai.xsd</DependentUpon>

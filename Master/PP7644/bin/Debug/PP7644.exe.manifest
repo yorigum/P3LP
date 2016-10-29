@@ -42,24 +42,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PP7644.exe" size="597504">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PP7644.exe" size="666112">
       <assemblyIdentity name="PP7644" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fvmOuvKL8wVpOb3KZvM/rusRKwlH8NYWURO88qQR9D4=</dsig:DigestValue>
+        <dsig:DigestValue>b6/8/fA+jng/f4i80XE3kxjDRrolwQUMIsl+KnJfCGA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="PP7644.exe.config" size="489">
+  <file name="PP7644.exe.config" size="487">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>rAFyyUCmqGSevMmsG6BknPRxxGcFxexgYGHOfBcrm04=</dsig:DigestValue>
+      <dsig:DigestValue>ONYc4bzou+h71ERq4UN1qy2n0dcARsBoLoNde1rPbtw=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
